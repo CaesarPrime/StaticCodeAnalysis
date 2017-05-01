@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="http://findbugs.sourceforge.net/xsl/default.xsl"?>
+
+<BugCollection version="3.0.1" sequence="0" timestamp="1493621334020" analysisTimestamp="1493621332267" release="">
+  <Project projectName="SampleProject[SampleProject]">
+    <Jar>/home/caesar/Projects/IntelliJ/SampleProject/out/production/SampleProject/Login_Sources/Login.class</Jar>
+    <Jar>/home/caesar/Projects/IntelliJ/SampleProject/out/production/SampleProject/Login_Sources/Login_Approvals.class</Jar>
+    <Jar>/home/caesar/Projects/IntelliJ/SampleProject/out/production/SampleProject/Intercept/Intercept.class</Jar>
+    <Jar>/home/caesar/Projects/IntelliJ/SampleProject/out/production/SampleProject/Connection/Connector.class</Jar>
+    <Jar>/home/caesar/Projects/IntelliJ/SampleProject/out/production/SampleProject/Connection/ConnectionData.class</Jar>
+    <AuxClasspathEntry>/home/caesar/Projects/IntelliJ/SampleProject/out/production/SampleProject</AuxClasspathEntry>
+    <SrcDir>/home/caesar/Projects/IntelliJ/SampleProject/src</SrcDir>
+  </Project>
+  <BugInstance type="DMI_CONSTANT_DB_PASSWORD" priority="2" rank="7" abbrev="Dm" category="SECURITY" instanceHash="603dc17898e84b73504190f9ab24cc1b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="259">
+    <ShortMessage>Hardcoded constant database password</ShortMessage>
+    <LongMessage>Hardcoded constant database password in Connection.Connector.&lt;static initializer for Connector&gt;()</LongMessage>
+    <Class classname="Connection.Connector" primary="true">
+      <SourceLine classname="Connection.Connector" sourcefile="Connector.java" sourcepath="Connection/Connector.java" relSourcepath="Connection/Connector.java">
+        <Message>In Connector.java</Message>
+      </SourceLine>
+      <Message>In class Connection.Connector</Message>
+    </Class>
+    <Method classname="Connection.Connector" name="&lt;clinit&gt;" signature="()V" isStatic="true" primary="true">
+      <SourceLine classname="Connection.Connector" start="12" end="23" startBytecode="0" endBytecode="26" sourcefile="Connector.java" sourcepath="Connection/Connector.java" relSourcepath="Connection/Connector.java"/>
+      <Message>In method Connection.Connector.&lt;static initializer for Connector&gt;()</Message>
+    </Method>
+    <SourceLine classname="Connection.Connector" primary="true" start="19" end="19" startBytecode="24" endBytecode="24" sourcefile="Connector.java" sourcepath="Connection/Connector.java" relSourcepath="Connection/Connector.java">
+      <Message>At Connector.java:[line 19]</Message>
+    </SourceLine>
+    <SourceLine classname="Connection.Connector" primary="true" start="19" end="19" startBytecode="24" endBytecode="24" sourcefile="Connector.java" sourcepath="Connection/Connector.java" relSourcepath="Connection/Connector.java">
+      <Message>At Connector.java:[line 19]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" rank="20" abbrev="OBL" category="EXPERIMENTAL" instanceHash="27f07d76f90e2142b9e87b1f123545f8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method may fail to clean up stream or resource</ShortMessage>
+    <LongMessage>Login_Sources.Login_Approvals.validate(Login) may fail to clean up java.sql.Statement</LongMessage>
+    <Class classname="Login_Sources.Login_Approvals" primary="true">
+      <SourceLine classname="Login_Sources.Login_Approvals" sourcefile="Login_Approvals.java" sourcepath="Login_Sources/Login_Approvals.java" relSourcepath="Login_Sources/Login_Approvals.java">
+        <Message>In Login_Approvals.java</Message>
+      </SourceLine>
+      <Message>In class Login_Sources.Login_Approvals</Message>
+    </Class>
+    <Method classname="Login_Sources.Login_Approvals" name="validate" signature="(LLogin_Sources/Login;)Z" isStatic="true" primary="true">
+      <SourceLine classname="Login_Sources.Login_Approvals" start="18" end="55" startBytecode="0" endBytecode="367" sourcefile="Login_Approvals.java" sourcepath="Login_Sources/Login_Approvals.java" relSourcepath="Login_Sources/Login_Approvals.java"/>
+      <Message>In method Login_Sources.Login_Approvals.validate(Login)</Message>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java">
+        <Message>In Statement.java</Message>
+      </SourceLine>
+      <Message>Reference type java.sql.Statement</Message>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING">
+      <Message>1 instances of obligation remaining</Message>
+    </Int>
+    <SourceLine classname="Login_Sources.Login_Approvals" primary="true" start="32" end="32" startBytecode="44" endBytecode="44" sourcefile="Login_Approvals.java" sourcepath="Login_Sources/Login_Approvals.java" relSourcepath="Login_Sources/Login_Approvals.java" role="SOURCE_LINE_OBLIGATION_CREATED">
+      <Message>Obligation to clean up resource created at Login_Approvals.java:[line 32] is not discharged</Message>
+    </SourceLine>
+    <SourceLine classname="Login_Sources.Login_Approvals" start="35" end="35" startBytecode="51" endBytecode="51" sourcefile="Login_Approvals.java" sourcepath="Login_Sources/Login_Approvals.java" relSourcepath="Login_Sources/Login_Approvals.java" role="SOURCE_LINE_PATH_CONTINUES">
+      <Message>Path continues at Login_Approvals.java:[line 35]</Message>
+    </SourceLine>
+    <SourceLine classname="Login_Sources.Login_Approvals" start="36" end="36" startBytecode="60" endBytecode="60" sourcefile="Login_Approvals.java" sourcepath="Login_Sources/Login_Approvals.java" relSourcepath="Login_Sources/Login_Approvals.java" role="SOURCE_LINE_PATH_CONTINUES">
+      <Message>Path continues at Login_Approvals.java:[line 36]</Message>
+    </SourceLine>
+    <SourceLine classname="Login_Sources.Login_Approvals" start="39" end="39" startBytecode="73" endBytecode="73" sourcefile="Login_Approvals.java" sourcepath="Login_Sources/Login_Approvals.java" relSourcepath="Login_Sources/Login_Approvals.java" role="SOURCE_LINE_PATH_CONTINUES">
+      <Message>Path continues at Login_Approvals.java:[line 39]</Message>
+    </SourceLine>
+    <SourceLine classname="Login_Sources.Login_Approvals" start="42" end="42" startBytecode="82" endBytecode="82" sourcefile="Login_Approvals.java" sourcepath="Login_Sources/Login_Approvals.java" relSourcepath="Login_Sources/Login_Approvals.java" role="SOURCE_LINE_PATH_CONTINUES">
+      <Message>Path continues at Login_Approvals.java:[line 42]</Message>
+    </SourceLine>
+    <SourceLine classname="Login_Sources.Login_Approvals" start="49" end="49" startBytecode="90" endBytecode="90" sourcefile="Login_Approvals.java" sourcepath="Login_Sources/Login_Approvals.java" relSourcepath="Login_Sources/Login_Approvals.java" role="SOURCE_LINE_PATH_CONTINUES">
+      <Message>Path continues at Login_Approvals.java:[line 49]</Message>
+    </SourceLine>
+    <SourceLine classname="Login_Sources.Login_Approvals" start="50" end="50" startBytecode="97" endBytecode="97" sourcefile="Login_Approvals.java" sourcepath="Login_Sources/Login_Approvals.java" relSourcepath="Login_Sources/Login_Approvals.java" role="SOURCE_LINE_PATH_CONTINUES">
+      <Message>Path continues at Login_Approvals.java:[line 50]</Message>
+    </SourceLine>
+    <SourceLine classname="Login_Sources.Login_Approvals" start="54" end="54" startBytecode="103" endBytecode="103" sourcefile="Login_Approvals.java" sourcepath="Login_Sources/Login_Approvals.java" relSourcepath="Login_Sources/Login_Approvals.java" role="SOURCE_LINE_PATH_CONTINUES">
+      <Message>Path continues at Login_Approvals.java:[line 54]</Message>
+    </SourceLine>
+    <SourceLine classname="Login_Sources.Login_Approvals" start="55" end="55" startBytecode="135" endBytecode="135" sourcefile="Login_Approvals.java" sourcepath="Login_Sources/Login_Approvals.java" relSourcepath="Login_Sources/Login_Approvals.java" role="SOURCE_LINE_PATH_CONTINUES">
+      <Message>Path continues at Login_Approvals.java:[line 55]</Message>
+    </SourceLine>
+    <String value="{Statement x 1}" role="STRING_REMAINING_OBLIGATIONS">
+      <Message>Remaining obligations: {Statement x 1}</Message>
+    </String>
+  </BugInstance>
+  <BugInstance type="ODR_OPEN_DATABASE_RESOURCE" priority="2" rank="16" abbrev="ODR" category="BAD_PRACTICE" instanceHash="a2363e0e207a118915a2cc58428c764d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method may fail to close database resource</ShortMessage>
+    <LongMessage>Login_Sources.Login_Approvals.validate(Login) may fail to close PreparedStatement</LongMessage>
+    <Class classname="Login_Sources.Login_Approvals" primary="true">
+      <SourceLine classname="Login_Sources.Login_Approvals" sourcefile="Login_Approvals.java" sourcepath="Login_Sources/Login_Approvals.java" relSourcepath="Login_Sources/Login_Approvals.java">
+        <Message>In Login_Approvals.java</Message>
+      </SourceLine>
+      <Message>In class Login_Sources.Login_Approvals</Message>
+    </Class>
+    <Method classname="Login_Sources.Login_Approvals" name="validate" signature="(LLogin_Sources/Login;)Z" isStatic="true" primary="true">
+      <SourceLine classname="Login_Sources.Login_Approvals" start="18" end="55" startBytecode="0" endBytecode="57" sourcefile="Login_Approvals.java" sourcepath="Login_Sources/Login_Approvals.java" relSourcepath="Login_Sources/Login_Approvals.java"/>
+      <Message>In method Login_Sources.Login_Approvals.validate(Login)</Message>
+    </Method>
+    <Type descriptor="Ljava/sql/PreparedStatement;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.sql.PreparedStatement" start="1265" end="1318" sourcefile="PreparedStatement.java" sourcepath="java/sql/PreparedStatement.java">
+        <Message>At PreparedStatement.java:[lines 1265-1318]</Message>
+      </SourceLine>
+      <Message>Need to close java.sql.PreparedStatement </Message>
+    </Type>
+    <SourceLine classname="Login_Sources.Login_Approvals" primary="true" start="32" end="32" startBytecode="44" endBytecode="44" sourcefile="Login_Approvals.java" sourcepath="Login_Sources/Login_Approvals.java" relSourcepath="Login_Sources/Login_Approvals.java">
+      <Message>At Login_Approvals.java:[line 32]</Message>
+    </SourceLine>
+    <SourceLine classname="Login_Sources.Login_Approvals" primary="true" start="32" end="32" startBytecode="44" endBytecode="44" sourcefile="Login_Approvals.java" sourcepath="Login_Sources/Login_Approvals.java" relSourcepath="Login_Sources/Login_Approvals.java">
+      <Message>At Login_Approvals.java:[line 32]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="SECURITY">
+    <Description>Security</Description>
+  </BugCategory>
+  <BugCategory category="EXPERIMENTAL">
+    <Description>Experimental</Description>
+  </BugCategory>
+  <BugPattern type="DMI_CONSTANT_DB_PASSWORD" abbrev="Dm" category="SECURITY" cweid="259">
+    <ShortDescription>Hardcoded constant database password</ShortDescription>
+    <Details><![CDATA[
+      
+    <p>This code creates a database connect using a hardcoded, constant password. Anyone with access to either the source code or the compiled code can
+    easily learn the password.
+</p>
+
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="ODR_OPEN_DATABASE_RESOURCE" abbrev="ODR" category="BAD_PRACTICE">
+    <ShortDescription>Method may fail to close database resource</ShortDescription>
+    <Details><![CDATA[
+
+<p> The method creates a database resource (such as a database connection
+or row set), does not assign it to any
+fields, pass it to other methods, or return it, and does not appear to close
+the object on all paths out of the method.&nbsp; Failure to
+close database resources on all paths out of a method may
+result in poor performance, and could cause the application to
+have problems communicating with the database.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="OBL_UNSATISFIED_OBLIGATION" abbrev="OBL" category="EXPERIMENTAL">
+    <ShortDescription>Method may fail to clean up stream or resource</ShortDescription>
+    <Details><![CDATA[
+          
+          <p>
+          This method may fail to clean up (close, dispose of) a stream,
+          database object, or other
+          resource requiring an explicit cleanup operation.
+          </p>
+
+          <p>
+          In general, if a method opens a stream or other resource,
+          the method should use a try/finally block to ensure that
+          the stream or resource is cleaned up before the method
+          returns.
+          </p>
+
+          <p>
+          This bug pattern is essentially the same as the
+          OS_OPEN_STREAM and ODR_OPEN_DATABASE_RESOURCE
+          bug patterns, but is based on a different
+          (and hopefully better) static analysis technique.
+          We are interested is getting feedback about the
+          usefulness of this bug pattern.
+          To send feedback, either:
+          </p>
+          <ul>
+            <li>send email to findbugs@cs.umd.edu</li>
+            <li>file a bug report: <a href="http://findbugs.sourceforge.net/reportingBugs.html">http://findbugs.sourceforge.net/reportingBugs.html</a></li>
+          </ul>
+
+          <p>
+          In particular,
+          the false-positive suppression heuristics for this
+          bug pattern have not been extensively tuned, so
+          reports about false positives are helpful to us.
+          </p>
+
+          <p>
+          See Weimer and Necula, <i>Finding and Preventing Run-Time Error Handling Mistakes</i>, for
+          a description of the analysis technique.
+          </p>
+          
+      ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="OBL">
+    <Description>Unsatisfied obligation to clean up stream or resource</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="ODR">
+    <Description>Database resource not closed on all paths</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 1 May 2017 12:18:51 +0530" total_classes="5" referenced_classes="22" total_bugs="3" total_size="67" num_packages="3" java_version="1.8.0_112-release" vm_version="25.112-b16" cpu_seconds="13.91" clock_seconds="40.54" peak_mbytes="615.27" alloc_mbytes="725.00" gc_seconds="0.40" priority_2="3">
+    <FileStats path="Connection/ConnectionData.java" bugCount="0" size="5"/>
+    <FileStats path="Connection/Connector.java" bugCount="1" size="15" bugHash="cc99316a99320d4816e122b8754b8ab0"/>
+    <FileStats path="Intercept/Intercept.java" bugCount="0" size="13"/>
+    <FileStats path="Login_Sources/Login.java" bugCount="0" size="12"/>
+    <FileStats path="Login_Sources/Login_Approvals.java" bugCount="2" size="22" bugHash="a0295b01d13e7c1690fc4c174d5138ef"/>
+    <PackageStats package="Connection" total_bugs="1" total_types="2" total_size="20" priority_2="1">
+      <ClassStats class="Connection.ConnectionData" sourceFile="ConnectionData.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="Connection.Connector" sourceFile="Connector.java" interface="false" size="15" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="Intercept" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="Intercept.Intercept" sourceFile="Intercept.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="Login_Sources" total_bugs="2" total_types="2" total_size="34" priority_2="2">
+      <ClassStats class="Login_Sources.Login" sourceFile="Login.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="Login_Sources.Login_Approvals" sourceFile="Login_Approvals.java" interface="false" size="22" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="634" invocations="376" avgMicrosecondsPerInvocation="1687" maxMicrosecondsPerInvocation="248763" standardDeviationMircosecondsPerInvocation="13313"/>
+      <ClassProfile name="edu.umd.cs.findbugs.FindBugs2" totalMilliseconds="146" invocations="2" avgMicrosecondsPerInvocation="73323" maxMicrosecondsPerInvocation="84102" standardDeviationMircosecondsPerInvocation="10781"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="108" invocations="22" avgMicrosecondsPerInvocation="4944" maxMicrosecondsPerInvocation="33139" standardDeviationMircosecondsPerInvocation="9609"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="95" invocations="378" avgMicrosecondsPerInvocation="251" maxMicrosecondsPerInvocation="38027" standardDeviationMircosecondsPerInvocation="2255"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="77" invocations="72" avgMicrosecondsPerInvocation="1078" maxMicrosecondsPerInvocation="18524" standardDeviationMircosecondsPerInvocation="3026"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="74" invocations="22" avgMicrosecondsPerInvocation="3376" maxMicrosecondsPerInvocation="30105" standardDeviationMircosecondsPerInvocation="6944"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="62" invocations="22" avgMicrosecondsPerInvocation="2858" maxMicrosecondsPerInvocation="23649" standardDeviationMircosecondsPerInvocation="5724"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="62" invocations="22" avgMicrosecondsPerInvocation="2824" maxMicrosecondsPerInvocation="44335" standardDeviationMircosecondsPerInvocation="9128"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="48" invocations="338" avgMicrosecondsPerInvocation="143" maxMicrosecondsPerInvocation="19542" standardDeviationMircosecondsPerInvocation="1132"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="36" invocations="5" avgMicrosecondsPerInvocation="7259" maxMicrosecondsPerInvocation="35511" standardDeviationMircosecondsPerInvocation="14126"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
