@@ -1,0 +1,2835 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>FindBugs Report</title>
+<style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+
+		.tablerow0:hover, .tablerow1:hover {
+			background: #aaffaa;
+		}
+
+		.priority-1 {
+		    color: red;
+		    font-weight: bold;
+		}
+		.priority-2 {
+		    color: orange;
+		    font-weight: bold;
+		}
+		.priority-3 {
+		    color: green;
+		    font-weight: bold;
+		}
+		.priority-4 {
+		    color: blue;
+		    font-weight: bold;
+		}
+		</style>
+<script type="text/javascript">
+			function toggleRow(elid) {
+				if (document.getElementById) {
+					element = document.getElementById(elid);
+					if (element) {
+						if (element.style.display == 'none') {
+							element.style.display = 'block';
+							//window.status = 'Toggle on!';
+						} else {
+							element.style.display = 'none';
+							//window.status = 'Toggle off!';
+						}
+					}
+				}
+			}
+		</script>
+</head>
+<body>
+<h1>
+<a href="http://findbugs.sourceforge.net">FindBugs</a> Report</h1>
+<h2>Project Information</h2>
+<p>Project: 
+		JavaVulnerableLab Maven Webapp</p>
+<p>FindBugs version: 3.0.1</p>
+<p>Code analyzed:</p>
+<ul>
+<li>/home/caesar/Projects/IntelliJ/StaticCodeAnalysis/StaticAnalysisNew/JavaVulnerableLab-master/target/classes</li>
+</ul>
+<p>
+<br/>
+<br/>
+</p>
+<h2>Metrics</h2>
+<p>0 lines of code analyzed,
+	in 0 classes, 
+	in 3 packages.</p>
+<table width="500" cellpadding="5" cellspacing="2">
+<tr class="tableheader">
+<th align="left">Metric</th>
+<th align="right">Total</th>
+<th align="right">Density*</th>
+</tr>
+<tr class="tablerow0">
+<td>High Priority Warnings</td>
+<td align="right">21</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="tablerow1">
+<td>Medium Priority Warnings</td>
+<td align="right">66</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="tablerow1">
+<td>Low Priority Warnings</td>
+<td align="right">72</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="$totalClass">
+<td>
+<b>Total Warnings</b>
+</td>
+<td align="right">
+<b>159</b>
+</td>
+<td align="right">
+<b>0.00</b>
+</td>
+</tr>
+</table>
+<p>
+<i>(* Defects per Thousand lines of non-commenting source statements)</i>
+</p>
+<p>
+<br/>
+<br/>
+</p>
+<h2>Contents</h2>
+<ul>
+<li>
+<a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</li>
+<li>
+<a href="#Warnings_CORRECTNESS">Correctness Warnings</a>
+</li>
+<li>
+<a href="#Warnings_EXPERIMENTAL">Experimental Warnings</a>
+</li>
+<li>
+<a href="#Warnings_I18N">Internationalization Warnings</a>
+</li>
+<li>
+<a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+</li>
+<li>
+<a href="#Warnings_SECURITY">Security Warnings</a>
+</li>
+<li>
+<a href="#Warnings_STYLE">Dodgy code Warnings</a>
+</li>
+<li>
+<a href="#Details">Details</a>
+</li>
+</ul>
+<h1>Summary</h1>
+<table width="500" cellpadding="5" cellspacing="2">
+<tr class="tableheader">
+<th align="left">Warning Type</th>
+<th align="right">Number</th>
+</tr>
+<tr class="tablerow0">
+<td>
+<a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</td>
+<td align="right">26</td>
+</tr>
+<tr class="tablerow1">
+<td>
+<a href="#Warnings_CORRECTNESS">Correctness Warnings</a>
+</td>
+<td align="right">1</td>
+</tr>
+<tr class="tablerow0">
+<td>
+<a href="#Warnings_EXPERIMENTAL">Experimental Warnings</a>
+</td>
+<td align="right">88</td>
+</tr>
+<tr class="tablerow1">
+<td>
+<a href="#Warnings_I18N">Internationalization Warnings</a>
+</td>
+<td align="right">2</td>
+</tr>
+<tr class="tablerow0">
+<td>
+<a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+</td>
+<td align="right">4</td>
+</tr>
+<tr class="tablerow1">
+<td>
+<a href="#Warnings_SECURITY">Security Warnings</a>
+</td>
+<td align="right">10</td>
+</tr>
+<tr class="tablerow0">
+<td>
+<a href="#Warnings_STYLE">Dodgy code Warnings</a>
+</td>
+<td align="right">28</td>
+</tr>
+<tr class="tablerow1">
+<td>
+<b>Total</b>
+</td>
+<td align="right">
+<b>159</b>
+</td>
+</tr>
+</table>
+<h1>Warnings</h1>
+<p>Click on a warning row to see full context information.</p>
+<h2>
+<a name="Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72109');">
+<td>
+<span class="priority-3">DE</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) might ignore Exception</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72109" style="display: none;">
+<a href="#DE_MIGHT_IGNORE">Bug type DE_MIGHT_IGNORE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Logout<br/>In method org.cysecurity.cspf.jvl.controller.Logout.processRequest(HttpServletRequest, HttpServletResponse)<br/>Exception class java.lang.Exception<br/>At Logout.java:[line 42]<br/>At Logout.java:[line 42]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N76478');">
+<td>
+<span class="priority-2">Nm</span>
+</td>
+<td>The class name xxe doesn't start with an upper case letter</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N76478" style="display: none;">
+<a href="#NM_CLASS_NAMING_CONVENTION">Bug type NM_CLASS_NAMING_CONVENTION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.xxe<br/>At xxe.java:[lines 27-103]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66917');">
+<td>
+<span class="priority-2">ODR</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) may fail to close Statement</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66917" style="display: none;">
+<a href="#ODR_OPEN_DATABASE_RESOURCE">Bug type ODR_OPEN_DATABASE_RESOURCE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.EmailCheck<br/>In method org.cysecurity.cspf.jvl.controller.EmailCheck.processRequest(HttpServletRequest, HttpServletResponse)<br/>Need to close java.sql.Statement <br/>At EmailCheck.java:[line 47]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68200');">
+<td>
+<span class="priority-2">ODR</span>
+</td>
+<td>setup(String) may fail to close Connection</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68200" style="display: none;">
+<a href="#ODR_OPEN_DATABASE_RESOURCE">Bug type ODR_OPEN_DATABASE_RESOURCE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.setup(String)<br/>Need to close java.sql.Connection <br/>At Install.java:[line 112]<br/>Another occurrence at Install.java:[line 121]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68279');">
+<td>
+<span class="priority-2">ODR</span>
+</td>
+<td>setup(String) may fail to close Statement</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68279" style="display: none;">
+<a href="#ODR_OPEN_DATABASE_RESOURCE">Bug type ODR_OPEN_DATABASE_RESOURCE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.setup(String)<br/>Need to close java.sql.Statement <br/>At Install.java:[line 116]<br/>Another occurrence at Install.java:[line 122]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N71108');">
+<td>
+<span class="priority-2">ODR</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) may fail to close Statement</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N71108" style="display: none;">
+<a href="#ODR_OPEN_DATABASE_RESOURCE">Bug type ODR_OPEN_DATABASE_RESOURCE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>Need to close java.sql.Statement <br/>At LoginValidator.java:[line 51]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72901');">
+<td>
+<span class="priority-2">ODR</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) may fail to close Statement</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72901" style="display: none;">
+<a href="#ODR_OPEN_DATABASE_RESOURCE">Bug type ODR_OPEN_DATABASE_RESOURCE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Register<br/>In method org.cysecurity.cspf.jvl.controller.Register.processRequest(HttpServletRequest, HttpServletResponse)<br/>Need to close java.sql.Statement <br/>At Register.java:[line 57]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N73990');">
+<td>
+<span class="priority-2">ODR</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) may fail to close PreparedStatement</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N73990" style="display: none;">
+<a href="#ODR_OPEN_DATABASE_RESOURCE">Bug type ODR_OPEN_DATABASE_RESOURCE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.SendMessage<br/>In method org.cysecurity.cspf.jvl.controller.SendMessage.processRequest(HttpServletRequest, HttpServletResponse)<br/>Need to close java.sql.PreparedStatement <br/>At SendMessage.java:[line 49]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75011');">
+<td>
+<span class="priority-2">ODR</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) may fail to close Statement</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75011" style="display: none;">
+<a href="#ODR_OPEN_DATABASE_RESOURCE">Bug type ODR_OPEN_DATABASE_RESOURCE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.UsernameCheck<br/>In method org.cysecurity.cspf.jvl.controller.UsernameCheck.processRequest(HttpServletRequest, HttpServletResponse)<br/>Need to close java.sql.Statement <br/>At UsernameCheck.java:[line 47]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N65816');">
+<td>
+<span class="priority-3">OS</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) may fail to close stream on exception</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N65816" style="display: none;">
+<a href="#OS_OPEN_STREAM_EXCEPTION_PATH">Bug type OS_OPEN_STREAM_EXCEPTION_PATH (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.AddPage<br/>In method org.cysecurity.cspf.jvl.controller.AddPage.processRequest(HttpServletRequest, HttpServletResponse)<br/>Need to close java.io.Writer <br/>At AddPage.java:[line 52]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68360');">
+<td>
+<span class="priority-2">OS</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) may fail to close stream</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68360" style="display: none;">
+<a href="#OS_OPEN_STREAM">Bug type OS_OPEN_STREAM (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.processRequest(HttpServletRequest, HttpServletResponse)<br/>Need to close java.io.InputStream <br/>At Install.java:[line 65]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68429');">
+<td>
+<span class="priority-3">OS</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) may fail to close stream on exception</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68429" style="display: none;">
+<a href="#OS_OPEN_STREAM_EXCEPTION_PATH">Bug type OS_OPEN_STREAM_EXCEPTION_PATH (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.processRequest(HttpServletRequest, HttpServletResponse)<br/>Need to close java.io.OutputStream <br/>At Install.java:[line 72]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76978');">
+<td>
+<span class="priority-2">OS</span>
+</td>
+<td>connect(String) may fail to close stream</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76978" style="display: none;">
+<a href="#OS_OPEN_STREAM">Bug type OS_OPEN_STREAM (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.model.DBConnect<br/>In method org.cysecurity.cspf.jvl.model.DBConnect.connect(String)<br/>Need to close java.io.InputStream <br/>At DBConnect.java:[line 26]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66065');">
+<td>
+<span class="priority-2">RV</span>
+</td>
+<td>Exceptional return value of java.io.File.delete() ignored</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66065" style="display: none;">
+<a href="#RV_RETURN_VALUE_IGNORED_BAD_PRACTICE">Bug type RV_RETURN_VALUE_IGNORED_BAD_PRACTICE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.AddPage<br/>In method org.cysecurity.cspf.jvl.controller.AddPage.processRequest(HttpServletRequest, HttpServletResponse)<br/>Called method java.io.File.delete()<br/>At AddPage.java:[line 48]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66258');">
+<td>
+<span class="priority-3">SnVI</span>
+</td>
+<td>AddPage is Serializable; consider declaring a serialVersionUID</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66258" style="display: none;">
+<a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.AddPage<br/>At AddPage.java:[lines 23-113]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67185');">
+<td>
+<span class="priority-3">SnVI</span>
+</td>
+<td>EmailCheck is Serializable; consider declaring a serialVersionUID</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67185" style="display: none;">
+<a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.EmailCheck<br/>At EmailCheck.java:[lines 25-105]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67619');">
+<td>
+<span class="priority-3">SnVI</span>
+</td>
+<td>ForwardMe is Serializable; consider declaring a serialVersionUID</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67619" style="display: none;">
+<a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.ForwardMe<br/>At ForwardMe.java:[lines 21-89]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69320');">
+<td>
+<span class="priority-3">SnVI</span>
+</td>
+<td>Install is Serializable; consider declaring a serialVersionUID</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69320" style="display: none;">
+<a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>At Install.java:[lines 28-223]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71573');">
+<td>
+<span class="priority-3">SnVI</span>
+</td>
+<td>LoginValidator is Serializable; consider declaring a serialVersionUID</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71573" style="display: none;">
+<a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>At LoginValidator.java:[lines 28-119]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N72320');">
+<td>
+<span class="priority-3">SnVI</span>
+</td>
+<td>Logout is Serializable; consider declaring a serialVersionUID</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N72320" style="display: none;">
+<a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Logout<br/>At Logout.java:[lines 21-84]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72555');">
+<td>
+<span class="priority-3">SnVI</span>
+</td>
+<td>Open is Serializable; consider declaring a serialVersionUID</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72555" style="display: none;">
+<a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Open<br/>At Open.java:[lines 20-88]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N73409');">
+<td>
+<span class="priority-3">SnVI</span>
+</td>
+<td>Register is Serializable; consider declaring a serialVersionUID</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N73409" style="display: none;">
+<a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Register<br/>At Register.java:[lines 26-120]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N74498');">
+<td>
+<span class="priority-3">SnVI</span>
+</td>
+<td>SendMessage is Serializable; consider declaring a serialVersionUID</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N74498" style="display: none;">
+<a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.SendMessage<br/>At SendMessage.java:[lines 23-109]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N75279');">
+<td>
+<span class="priority-3">SnVI</span>
+</td>
+<td>UsernameCheck is Serializable; consider declaring a serialVersionUID</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N75279" style="display: none;">
+<a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.UsernameCheck<br/>At UsernameCheck.java:[lines 25-105]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75770');">
+<td>
+<span class="priority-3">SnVI</span>
+</td>
+<td>XPathQuery is Serializable; consider declaring a serialVersionUID</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75770" style="display: none;">
+<a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.XPathQuery<br/>At XPathQuery.java:[lines 26-112]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N76572');">
+<td>
+<span class="priority-3">SnVI</span>
+</td>
+<td>xxe is Serializable; consider declaring a serialVersionUID</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N76572" style="display: none;">
+<a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.xxe<br/>At xxe.java:[lines 27-103]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_CORRECTNESS">Correctness Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N77235');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference of sb on exception path</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N77235" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH_EXCEPTION">Bug type NP_NULL_ON_SOME_PATH_EXCEPTION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.model.HashMe<br/>In method org.cysecurity.cspf.jvl.model.HashMe.hashMe(String)<br/>Value loaded from sb<br/>Dereferenced at HashMe.java:[line 29]<br/>Null value at HashMe.java:[line 13]<br/>Known null at HashMe.java:[line 25]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_EXPERIMENTAL">Experimental Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66601');">
+<td>
+<span class="priority-2">OBL</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) may fail to clean up java.sql.ResultSet</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66601" style="display: none;">
+<a href="#OBL_UNSATISFIED_OBLIGATION">Bug type OBL_UNSATISFIED_OBLIGATION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.EmailCheck<br/>In method org.cysecurity.cspf.jvl.controller.EmailCheck.processRequest(HttpServletRequest, HttpServletResponse)<br/>Reference type java.sql.ResultSet<br/>1 instances of obligation remaining<br/>Obligation to clean up resource created at EmailCheck.java:[line 48] is not discharged<br/>Path continues at EmailCheck.java:[line 49]<br/>Path continues at EmailCheck.java:[line 51]<br/>Path continues at EmailCheck.java:[line 58]<br/>Path continues at EmailCheck.java:[line 65]<br/>Path continues at EmailCheck.java:[line 66]<br/>Path continues at EmailCheck.java:[line 67]<br/>Remaining obligations: {Statement x 1,ResultSet x 1}</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66753');">
+<td>
+<span class="priority-2">OBL</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) may fail to clean up java.sql.Statement</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66753" style="display: none;">
+<a href="#OBL_UNSATISFIED_OBLIGATION">Bug type OBL_UNSATISFIED_OBLIGATION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.EmailCheck<br/>In method org.cysecurity.cspf.jvl.controller.EmailCheck.processRequest(HttpServletRequest, HttpServletResponse)<br/>Reference type java.sql.Statement<br/>1 instances of obligation remaining<br/>Obligation to clean up resource created at EmailCheck.java:[line 47] is not discharged<br/>Path continues at EmailCheck.java:[line 48]<br/>Path continues at EmailCheck.java:[line 49]<br/>Path continues at EmailCheck.java:[line 51]<br/>Path continues at EmailCheck.java:[line 58]<br/>Path continues at EmailCheck.java:[line 65]<br/>Path continues at EmailCheck.java:[line 66]<br/>Path continues at EmailCheck.java:[line 67]<br/>Remaining obligations: {Statement x 1,ResultSet x 1}</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67656');">
+<td>
+<span class="priority-2">OBL</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) may fail to clean up java.io.InputStream</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67656" style="display: none;">
+<a href="#OBL_UNSATISFIED_OBLIGATION">Bug type OBL_UNSATISFIED_OBLIGATION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.processRequest(HttpServletRequest, HttpServletResponse)<br/>Reference type java.io.InputStream<br/>1 instances of obligation remaining<br/>Obligation to clean up resource created at Install.java:[line 65] is not discharged<br/>Path continues at Install.java:[line 66]<br/>Path continues at Install.java:[line 67]<br/>Path continues at Install.java:[line 68]<br/>Path continues at Install.java:[line 69]<br/>Path continues at Install.java:[line 70]<br/>Path continues at Install.java:[line 71]<br/>Path continues at Install.java:[line 72]<br/>Path continues at Install.java:[line 73]<br/>Path continues at Install.java:[line 74]<br/>Path continues at Install.java:[line 76]<br/>Path continues at Install.java:[line 77]<br/>Path continues at Install.java:[line 79]<br/>Path continues at Install.java:[line 81]<br/>Path continues at Install.java:[line 82]<br/>Path continues at Install.java:[line 83]<br/>Path continues at Install.java:[line 84]<br/>Path continues at Install.java:[line 85]<br/>Path continues at Install.java:[line 86]<br/>Path continues at Install.java:[line 87]<br/>Path continues at Install.java:[line 93]<br/>Path continues at Install.java:[line 95]<br/>Path continues at Install.java:[line 96]<br/>Path continues at Install.java:[line 101]<br/>Path continues at Install.java:[line 102]<br/>Remaining obligations: {InputStream x 1}</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68024');">
+<td>
+<span class="priority-2">OBL</span>
+</td>
+<td>setup(String) may fail to clean up java.sql.Statement</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68024" style="display: none;">
+<a href="#OBL_UNSATISFIED_OBLIGATION">Bug type OBL_UNSATISFIED_OBLIGATION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.setup(String)<br/>Reference type java.sql.Statement<br/>2 instances of obligation remaining<br/>Obligation to clean up resource created at Install.java:[line 116] is not discharged<br/>Path continues at Install.java:[line 117]<br/>Path continues at Install.java:[line 119]<br/>Path continues at Install.java:[line 120]<br/>Path continues at Install.java:[line 121]<br/>Path continues at Install.java:[line 122]<br/>Obligation to clean up resource created at Install.java:[line 122] is not discharged<br/>Path continues at Install.java:[line 123]<br/>Path continues at Install.java:[line 169]<br/>Remaining obligations: {Statement x 2}</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70840');">
+<td>
+<span class="priority-2">OBL</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) may fail to clean up java.sql.ResultSet</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70840" style="display: none;">
+<a href="#OBL_UNSATISFIED_OBLIGATION">Bug type OBL_UNSATISFIED_OBLIGATION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>Reference type java.sql.ResultSet<br/>1 instances of obligation remaining<br/>Obligation to clean up resource created at LoginValidator.java:[line 52] is not discharged<br/>Path continues at LoginValidator.java:[line 53]<br/>Path continues at LoginValidator.java:[line 72]<br/>Path continues at LoginValidator.java:[line 80]<br/>Path continues at LoginValidator.java:[line 82]<br/>Remaining obligations: {Statement x 1,ResultSet x 1}</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70968');">
+<td>
+<span class="priority-2">OBL</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) may fail to clean up java.sql.Statement</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70968" style="display: none;">
+<a href="#OBL_UNSATISFIED_OBLIGATION">Bug type OBL_UNSATISFIED_OBLIGATION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>Reference type java.sql.Statement<br/>1 instances of obligation remaining<br/>Obligation to clean up resource created at LoginValidator.java:[line 51] is not discharged<br/>Path continues at LoginValidator.java:[line 52]<br/>Path continues at LoginValidator.java:[line 53]<br/>Path continues at LoginValidator.java:[line 72]<br/>Path continues at LoginValidator.java:[line 80]<br/>Path continues at LoginValidator.java:[line 82]<br/>Remaining obligations: {Statement x 1,ResultSet x 1}</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72737');">
+<td>
+<span class="priority-2">OBL</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) may fail to clean up java.sql.Statement</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72737" style="display: none;">
+<a href="#OBL_UNSATISFIED_OBLIGATION">Bug type OBL_UNSATISFIED_OBLIGATION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Register<br/>In method org.cysecurity.cspf.jvl.controller.Register.processRequest(HttpServletRequest, HttpServletResponse)<br/>Reference type java.sql.Statement<br/>1 instances of obligation remaining<br/>Obligation to clean up resource created at Register.java:[line 57] is not discharged<br/>Path continues at Register.java:[line 58]<br/>Path continues at Register.java:[line 59]<br/>Path continues at Register.java:[line 61]<br/>Path continues at Register.java:[line 63]<br/>Path continues at Register.java:[line 75]<br/>Path continues at Register.java:[line 81]<br/>Path continues at Register.java:[line 82]<br/>Remaining obligations: {Statement x 1}</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N73802');">
+<td>
+<span class="priority-2">OBL</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) may fail to clean up java.sql.Statement</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N73802" style="display: none;">
+<a href="#OBL_UNSATISFIED_OBLIGATION">Bug type OBL_UNSATISFIED_OBLIGATION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.SendMessage<br/>In method org.cysecurity.cspf.jvl.controller.SendMessage.processRequest(HttpServletRequest, HttpServletResponse)<br/>Reference type java.sql.Statement<br/>1 instances of obligation remaining<br/>Obligation to clean up resource created at SendMessage.java:[line 49] is not discharged<br/>Path continues at SendMessage.java:[line 50]<br/>Path continues at SendMessage.java:[line 51]<br/>Path continues at SendMessage.java:[line 52]<br/>Path continues at SendMessage.java:[line 53]<br/>Path continues at SendMessage.java:[line 54]<br/>Path continues at SendMessage.java:[line 55]<br/>Path continues at SendMessage.java:[line 57]<br/>Path continues at SendMessage.java:[line 68]<br/>Path continues at SendMessage.java:[line 71]<br/>Remaining obligations: {Statement x 1}</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N74695');">
+<td>
+<span class="priority-2">OBL</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) may fail to clean up java.sql.ResultSet</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N74695" style="display: none;">
+<a href="#OBL_UNSATISFIED_OBLIGATION">Bug type OBL_UNSATISFIED_OBLIGATION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.UsernameCheck<br/>In method org.cysecurity.cspf.jvl.controller.UsernameCheck.processRequest(HttpServletRequest, HttpServletResponse)<br/>Reference type java.sql.ResultSet<br/>1 instances of obligation remaining<br/>Obligation to clean up resource created at UsernameCheck.java:[line 48] is not discharged<br/>Path continues at UsernameCheck.java:[line 49]<br/>Path continues at UsernameCheck.java:[line 51]<br/>Path continues at UsernameCheck.java:[line 58]<br/>Path continues at UsernameCheck.java:[line 65]<br/>Path continues at UsernameCheck.java:[line 66]<br/>Path continues at UsernameCheck.java:[line 67]<br/>Remaining obligations: {Statement x 1,ResultSet x 1}</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N74847');">
+<td>
+<span class="priority-2">OBL</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) may fail to clean up java.sql.Statement</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N74847" style="display: none;">
+<a href="#OBL_UNSATISFIED_OBLIGATION">Bug type OBL_UNSATISFIED_OBLIGATION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.UsernameCheck<br/>In method org.cysecurity.cspf.jvl.controller.UsernameCheck.processRequest(HttpServletRequest, HttpServletResponse)<br/>Reference type java.sql.Statement<br/>1 instances of obligation remaining<br/>Obligation to clean up resource created at UsernameCheck.java:[line 47] is not discharged<br/>Path continues at UsernameCheck.java:[line 48]<br/>Path continues at UsernameCheck.java:[line 49]<br/>Path continues at UsernameCheck.java:[line 51]<br/>Path continues at UsernameCheck.java:[line 58]<br/>Path continues at UsernameCheck.java:[line 65]<br/>Path continues at UsernameCheck.java:[line 66]<br/>Path continues at UsernameCheck.java:[line 67]<br/>Remaining obligations: {Statement x 1,ResultSet x 1}</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76802');">
+<td>
+<span class="priority-2">OBL</span>
+</td>
+<td>connect(String) may fail to clean up java.io.InputStream</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76802" style="display: none;">
+<a href="#OBL_UNSATISFIED_OBLIGATION">Bug type OBL_UNSATISFIED_OBLIGATION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.model.DBConnect<br/>In method org.cysecurity.cspf.jvl.model.DBConnect.connect(String)<br/>Reference type java.io.InputStream<br/>1 instances of obligation remaining<br/>Obligation to clean up resource created at DBConnect.java:[line 26] is not discharged<br/>Path continues at DBConnect.java:[line 27]<br/>Path continues at DBConnect.java:[line 28]<br/>Path continues at DBConnect.java:[line 29]<br/>Path continues at DBConnect.java:[line 30]<br/>Path continues at DBConnect.java:[line 31]<br/>Path continues at DBConnect.java:[line 34]<br/>Path continues at DBConnect.java:[line 35]<br/>Path continues at DBConnect.java:[line 36]<br/>Remaining obligations: {InputStream x 1}</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N65885');">
+<td>
+<span class="priority-1">TEST</span>
+</td>
+<td>Unknown bug pattern PATH_TRAVERSAL_IN</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N65885" style="display: none;">
+<a href="#PATH_TRAVERSAL_IN">Bug type PATH_TRAVERSAL_IN (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.AddPage<br/>In method org.cysecurity.cspf.jvl.controller.AddPage.processRequest(HttpServletRequest, HttpServletResponse)<br/>At AddPage.java:[line 45]<br/>Sink method File(...)<br/>At AddPage.java:[line 39]<br/>At AddPage.java:[line 44]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66138');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66138" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.AddPage<br/>In method org.cysecurity.cspf.jvl.controller.AddPage.processRequest(HttpServletRequest, HttpServletResponse)<br/>At AddPage.java:[line 39]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66198');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66198" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.AddPage<br/>In method org.cysecurity.cspf.jvl.controller.AddPage.processRequest(HttpServletRequest, HttpServletResponse)<br/>At AddPage.java:[line 40]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66369');">
+<td>
+<span class="priority-1">TEST</span>
+</td>
+<td>Unknown bug pattern XSS_SERVLET</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66369" style="display: none;">
+<a href="#XSS_SERVLET">Bug type XSS_SERVLET (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.AddPage<br/>In method org.cysecurity.cspf.jvl.controller.AddPage.processRequest(HttpServletRequest, HttpServletResponse)<br/>At AddPage.java:[line 55]<br/>Sink method PrintWriter.print(...)<br/>At AddPage.java:[line 39]<br/>At AddPage.java:[line 55]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66452');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern XSS_SERVLET</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66452" style="display: none;">
+<a href="#XSS_SERVLET">Bug type XSS_SERVLET (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.AddPage<br/>In method org.cysecurity.cspf.jvl.controller.AddPage.processRequest(HttpServletRequest, HttpServletResponse)<br/>At AddPage.java:[line 70]<br/>Sink method PrintWriter.print(...)</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67125');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67125" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.EmailCheck<br/>In method org.cysecurity.cspf.jvl.controller.EmailCheck.processRequest(HttpServletRequest, HttpServletResponse)<br/>At EmailCheck.java:[line 42]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67222');">
+<td>
+<span class="priority-1">TEST</span>
+</td>
+<td>Unknown bug pattern SQL_INJECTION_JDBC</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67222" style="display: none;">
+<a href="#SQL_INJECTION_JDBC">Bug type SQL_INJECTION_JDBC (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.EmailCheck<br/>In method org.cysecurity.cspf.jvl.controller.EmailCheck.processRequest(HttpServletRequest, HttpServletResponse)<br/>At EmailCheck.java:[line 48]<br/>Sink method Statement.executeQuery(...)<br/>At EmailCheck.java:[line 42]<br/>At EmailCheck.java:[line 48]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67366');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern XSS_SERVLET</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67366" style="display: none;">
+<a href="#XSS_SERVLET">Bug type XSS_SERVLET (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.EmailCheck<br/>In method org.cysecurity.cspf.jvl.controller.EmailCheck.processRequest(HttpServletRequest, HttpServletResponse)<br/>At EmailCheck.java:[line 58]<br/>Sink method PrintWriter.print(...)<br/>At EmailCheck.java:[line 43]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67438');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern XSS_SERVLET</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67438" style="display: none;">
+<a href="#XSS_SERVLET">Bug type XSS_SERVLET (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.EmailCheck<br/>In method org.cysecurity.cspf.jvl.controller.EmailCheck.processRequest(HttpServletRequest, HttpServletResponse)<br/>At EmailCheck.java:[line 62]<br/>Sink method PrintWriter.print(...)</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67499');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67499" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.ForwardMe<br/>In method org.cysecurity.cspf.jvl.controller.ForwardMe.processRequest(HttpServletRequest, HttpServletResponse)<br/>At ForwardMe.java:[line 37]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67559');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67559" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.ForwardMe<br/>In method org.cysecurity.cspf.jvl.controller.ForwardMe.processRequest(HttpServletRequest, HttpServletResponse)<br/>At ForwardMe.java:[line 39]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68498');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern PATH_TRAVERSAL_IN</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68498" style="display: none;">
+<a href="#PATH_TRAVERSAL_IN">Bug type PATH_TRAVERSAL_IN (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Install.java:[line 65]<br/>Sink method FileInputStream(...)<br/>At Install.java:[line 51]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68570');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern PATH_TRAVERSAL_OUT</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68570" style="display: none;">
+<a href="#PATH_TRAVERSAL_OUT">Bug type PATH_TRAVERSAL_OUT (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Install.java:[line 72]<br/>Sink method FileOutputStream(...)<br/>At Install.java:[line 51]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68780');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68780" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Install.java:[line 54]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68840');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68840" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Install.java:[line 55]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68900');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68900" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Install.java:[line 56]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68960');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68960" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Install.java:[line 57]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N69020');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N69020" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Install.java:[line 58]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69080');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69080" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Install.java:[line 59]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N69140');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N69140" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Install.java:[line 60]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69200');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69200" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Install.java:[line 61]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N69260');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N69260" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Install.java:[line 76]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69357');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern SQL_INJECTION_JDBC</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69357" style="display: none;">
+<a href="#SQL_INJECTION_JDBC">Bug type SQL_INJECTION_JDBC (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.setup(String)<br/>At Install.java:[line 117]<br/>Sink method Statement.executeUpdate(...)<br/>At Install.java:[line 117]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N69429');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern SQL_INJECTION_JDBC</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N69429" style="display: none;">
+<a href="#SQL_INJECTION_JDBC">Bug type SQL_INJECTION_JDBC (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.setup(String)<br/>At Install.java:[line 119]<br/>Sink method Statement.executeUpdate(...)<br/>At Install.java:[line 119]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69501');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern SQL_INJECTION_JDBC</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69501" style="display: none;">
+<a href="#SQL_INJECTION_JDBC">Bug type SQL_INJECTION_JDBC (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.setup(String)<br/>At Install.java:[line 127]<br/>Sink method Statement.executeUpdate(...)<br/>At Install.java:[line 127]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70360');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern HTTPONLY_COOKIE</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70360" style="display: none;">
+<a href="#HTTPONLY_COOKIE">Bug type HTTPONLY_COOKIE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>At LoginValidator.java:[line 59]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70416');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern HTTPONLY_COOKIE</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70416" style="display: none;">
+<a href="#HTTPONLY_COOKIE">Bug type HTTPONLY_COOKIE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>At LoginValidator.java:[line 63]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70472');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern HTTPONLY_COOKIE</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70472" style="display: none;">
+<a href="#HTTPONLY_COOKIE">Bug type HTTPONLY_COOKIE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>At LoginValidator.java:[line 64]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70528');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern HTTP_RESPONSE_SPLITTING</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70528" style="display: none;">
+<a href="#HTTP_RESPONSE_SPLITTING">Bug type HTTP_RESPONSE_SPLITTING (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>At LoginValidator.java:[line 63]<br/>Sink method Cookie(...)<br/>At LoginValidator.java:[line 43]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70600');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern HTTP_RESPONSE_SPLITTING</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70600" style="display: none;">
+<a href="#HTTP_RESPONSE_SPLITTING">Bug type HTTP_RESPONSE_SPLITTING (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>At LoginValidator.java:[line 64]<br/>Sink method Cookie(...)<br/>At LoginValidator.java:[line 44]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70672');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern INSECURE_COOKIE</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70672" style="display: none;">
+<a href="#INSECURE_COOKIE">Bug type INSECURE_COOKIE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>At LoginValidator.java:[line 59]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70728');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern INSECURE_COOKIE</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70728" style="display: none;">
+<a href="#INSECURE_COOKIE">Bug type INSECURE_COOKIE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>At LoginValidator.java:[line 63]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70784');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern INSECURE_COOKIE</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70784" style="display: none;">
+<a href="#INSECURE_COOKIE">Bug type INSECURE_COOKIE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>At LoginValidator.java:[line 64]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71393');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71393" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>At LoginValidator.java:[line 43]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N71453');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N71453" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>At LoginValidator.java:[line 44]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71513');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71513" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>At LoginValidator.java:[line 61]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N71610');">
+<td>
+<span class="priority-1">TEST</span>
+</td>
+<td>Unknown bug pattern SQL_INJECTION_JDBC</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N71610" style="display: none;">
+<a href="#SQL_INJECTION_JDBC">Bug type SQL_INJECTION_JDBC (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>At LoginValidator.java:[line 52]<br/>Sink method Statement.executeQuery(...)<br/>At LoginValidator.java:[line 43]<br/>At LoginValidator.java:[line 44]<br/>At LoginValidator.java:[line 52]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71765');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern TRUST_BOUNDARY_VIOLATION</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71765" style="display: none;">
+<a href="#TRUST_BOUNDARY_VIOLATION">Bug type TRUST_BOUNDARY_VIOLATION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>At LoginValidator.java:[line 56]<br/>Sink method HttpSession.setAttribute(...)<br/>At LoginValidator.java:[line 56]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N71837');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern TRUST_BOUNDARY_VIOLATION</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N71837" style="display: none;">
+<a href="#TRUST_BOUNDARY_VIOLATION">Bug type TRUST_BOUNDARY_VIOLATION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>At LoginValidator.java:[line 57]<br/>Sink method HttpSession.setAttribute(...)<br/>At LoginValidator.java:[line 57]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71909');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern TRUST_BOUNDARY_VIOLATION</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71909" style="display: none;">
+<a href="#TRUST_BOUNDARY_VIOLATION">Bug type TRUST_BOUNDARY_VIOLATION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>At LoginValidator.java:[line 58]<br/>Sink method HttpSession.setAttribute(...)<br/>At LoginValidator.java:[line 58]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N71981');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern UNVALIDATED_REDIRECT</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N71981" style="display: none;">
+<a href="#UNVALIDATED_REDIRECT">Bug type UNVALIDATED_REDIRECT (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>At LoginValidator.java:[line 68]<br/>Sink method javax.servlet.http.HttpServletResponse.sendRedirect(...)<br/>At LoginValidator.java:[line 68]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72053');">
+<td>
+<span class="priority-1">TEST</span>
+</td>
+<td>Unknown bug pattern URL_REWRITING</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72053" style="display: none;">
+<a href="#URL_REWRITING">Bug type URL_REWRITING (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>At LoginValidator.java:[line 68]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N72495');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N72495" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Open<br/>In method org.cysecurity.cspf.jvl.controller.Open.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Open.java:[line 36]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72592');">
+<td>
+<span class="priority-1">TEST</span>
+</td>
+<td>Unknown bug pattern UNVALIDATED_REDIRECT</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72592" style="display: none;">
+<a href="#UNVALIDATED_REDIRECT">Bug type UNVALIDATED_REDIRECT (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Open<br/>In method org.cysecurity.cspf.jvl.controller.Open.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Open.java:[line 39]<br/>Sink method javax.servlet.http.HttpServletResponse.sendRedirect(...)<br/>At Open.java:[line 36]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N73109');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N73109" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Register<br/>In method org.cysecurity.cspf.jvl.controller.Register.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Register.java:[line 43]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N73169');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N73169" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Register<br/>In method org.cysecurity.cspf.jvl.controller.Register.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Register.java:[line 44]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N73229');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N73229" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Register<br/>In method org.cysecurity.cspf.jvl.controller.Register.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Register.java:[line 45]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N73289');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N73289" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Register<br/>In method org.cysecurity.cspf.jvl.controller.Register.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Register.java:[line 46]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N73349');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N73349" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Register<br/>In method org.cysecurity.cspf.jvl.controller.Register.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Register.java:[line 47]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N73446');">
+<td>
+<span class="priority-1">TEST</span>
+</td>
+<td>Unknown bug pattern SQL_INJECTION_JDBC</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N73446" style="display: none;">
+<a href="#SQL_INJECTION_JDBC">Bug type SQL_INJECTION_JDBC (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Register<br/>In method org.cysecurity.cspf.jvl.controller.Register.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Register.java:[line 58]<br/>Sink method Statement.executeUpdate(...)<br/>At Register.java:[line 43]<br/>At Register.java:[line 44]<br/>At Register.java:[line 45]<br/>At Register.java:[line 46]<br/>At Register.java:[line 47]<br/>At Register.java:[line 58]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N73573');">
+<td>
+<span class="priority-1">TEST</span>
+</td>
+<td>Unknown bug pattern SQL_INJECTION_JDBC</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N73573" style="display: none;">
+<a href="#SQL_INJECTION_JDBC">Bug type SQL_INJECTION_JDBC (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Register<br/>In method org.cysecurity.cspf.jvl.controller.Register.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Register.java:[line 59]<br/>Sink method Statement.executeUpdate(...)<br/>At Register.java:[line 43]<br/>At Register.java:[line 59]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N74198');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N74198" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.SendMessage<br/>In method org.cysecurity.cspf.jvl.controller.SendMessage.processRequest(HttpServletRequest, HttpServletResponse)<br/>At SendMessage.java:[line 42]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N74258');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N74258" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.SendMessage<br/>In method org.cysecurity.cspf.jvl.controller.SendMessage.processRequest(HttpServletRequest, HttpServletResponse)<br/>At SendMessage.java:[line 43]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N74318');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N74318" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.SendMessage<br/>In method org.cysecurity.cspf.jvl.controller.SendMessage.processRequest(HttpServletRequest, HttpServletResponse)<br/>At SendMessage.java:[line 44]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N74378');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N74378" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.SendMessage<br/>In method org.cysecurity.cspf.jvl.controller.SendMessage.processRequest(HttpServletRequest, HttpServletResponse)<br/>At SendMessage.java:[line 45]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N74438');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N74438" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.SendMessage<br/>In method org.cysecurity.cspf.jvl.controller.SendMessage.processRequest(HttpServletRequest, HttpServletResponse)<br/>At SendMessage.java:[line 46]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N74535');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern UNVALIDATED_REDIRECT</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N74535" style="display: none;">
+<a href="#UNVALIDATED_REDIRECT">Bug type UNVALIDATED_REDIRECT (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.SendMessage<br/>In method org.cysecurity.cspf.jvl.controller.SendMessage.processRequest(HttpServletRequest, HttpServletResponse)<br/>At SendMessage.java:[line 66]<br/>Sink method javax.servlet.http.HttpServletResponse.sendRedirect(...)<br/>At SendMessage.java:[line 66]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75219');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75219" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.UsernameCheck<br/>In method org.cysecurity.cspf.jvl.controller.UsernameCheck.processRequest(HttpServletRequest, HttpServletResponse)<br/>At UsernameCheck.java:[line 42]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N75316');">
+<td>
+<span class="priority-1">TEST</span>
+</td>
+<td>Unknown bug pattern SQL_INJECTION_JDBC</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N75316" style="display: none;">
+<a href="#SQL_INJECTION_JDBC">Bug type SQL_INJECTION_JDBC (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.UsernameCheck<br/>In method org.cysecurity.cspf.jvl.controller.UsernameCheck.processRequest(HttpServletRequest, HttpServletResponse)<br/>At UsernameCheck.java:[line 48]<br/>Sink method Statement.executeQuery(...)<br/>At UsernameCheck.java:[line 42]<br/>At UsernameCheck.java:[line 48]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75460');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern XSS_SERVLET</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75460" style="display: none;">
+<a href="#XSS_SERVLET">Bug type XSS_SERVLET (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.UsernameCheck<br/>In method org.cysecurity.cspf.jvl.controller.UsernameCheck.processRequest(HttpServletRequest, HttpServletResponse)<br/>At UsernameCheck.java:[line 58]<br/>Sink method PrintWriter.print(...)<br/>At UsernameCheck.java:[line 43]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N75532');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern XSS_SERVLET</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N75532" style="display: none;">
+<a href="#XSS_SERVLET">Bug type XSS_SERVLET (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.UsernameCheck<br/>In method org.cysecurity.cspf.jvl.controller.UsernameCheck.processRequest(HttpServletRequest, HttpServletResponse)<br/>At UsernameCheck.java:[line 62]<br/>Sink method PrintWriter.print(...)</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75650');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75650" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.XPathQuery<br/>In method org.cysecurity.cspf.jvl.controller.XPathQuery.processRequest(HttpServletRequest, HttpServletResponse)<br/>At XPathQuery.java:[line 35]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N75710');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern SERVLET_PARAMETER</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N75710" style="display: none;">
+<a href="#SERVLET_PARAMETER">Bug type SERVLET_PARAMETER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.XPathQuery<br/>In method org.cysecurity.cspf.jvl.controller.XPathQuery.processRequest(HttpServletRequest, HttpServletResponse)<br/>At XPathQuery.java:[line 36]<br/>Value getParameter</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75807');">
+<td>
+<span class="priority-3">TEST</span>
+</td>
+<td>Unknown bug pattern TRUST_BOUNDARY_VIOLATION</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75807" style="display: none;">
+<a href="#TRUST_BOUNDARY_VIOLATION">Bug type TRUST_BOUNDARY_VIOLATION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.XPathQuery<br/>In method org.cysecurity.cspf.jvl.controller.XPathQuery.processRequest(HttpServletRequest, HttpServletResponse)<br/>At XPathQuery.java:[line 63]<br/>Sink method HttpSession.setAttribute(...)<br/>At XPathQuery.java:[line 53]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N75879');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern UNVALIDATED_REDIRECT</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N75879" style="display: none;">
+<a href="#UNVALIDATED_REDIRECT">Bug type UNVALIDATED_REDIRECT (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.XPathQuery<br/>In method org.cysecurity.cspf.jvl.controller.XPathQuery.processRequest(HttpServletRequest, HttpServletResponse)<br/>At XPathQuery.java:[line 57]<br/>Sink method javax.servlet.http.HttpServletResponse.sendRedirect(...)<br/>At XPathQuery.java:[line 57]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75951');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern UNVALIDATED_REDIRECT</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75951" style="display: none;">
+<a href="#UNVALIDATED_REDIRECT">Bug type UNVALIDATED_REDIRECT (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.XPathQuery<br/>In method org.cysecurity.cspf.jvl.controller.XPathQuery.processRequest(HttpServletRequest, HttpServletResponse)<br/>At XPathQuery.java:[line 64]<br/>Sink method javax.servlet.http.HttpServletResponse.sendRedirect(...)<br/>At XPathQuery.java:[line 64]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N76023');">
+<td>
+<span class="priority-1">TEST</span>
+</td>
+<td>Unknown bug pattern URL_REWRITING</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N76023" style="display: none;">
+<a href="#URL_REWRITING">Bug type URL_REWRITING (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.XPathQuery<br/>In method org.cysecurity.cspf.jvl.controller.XPathQuery.processRequest(HttpServletRequest, HttpServletResponse)<br/>At XPathQuery.java:[line 57]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76079');">
+<td>
+<span class="priority-1">TEST</span>
+</td>
+<td>Unknown bug pattern URL_REWRITING</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76079" style="display: none;">
+<a href="#URL_REWRITING">Bug type URL_REWRITING (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.XPathQuery<br/>In method org.cysecurity.cspf.jvl.controller.XPathQuery.processRequest(HttpServletRequest, HttpServletResponse)<br/>At XPathQuery.java:[line 64]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N76135');">
+<td>
+<span class="priority-1">TEST</span>
+</td>
+<td>Unknown bug pattern XPATH_INJECTION</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N76135" style="display: none;">
+<a href="#XPATH_INJECTION">Bug type XPATH_INJECTION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.XPathQuery<br/>In method org.cysecurity.cspf.jvl.controller.XPathQuery.processRequest(HttpServletRequest, HttpServletResponse)<br/>At XPathQuery.java:[line 53]<br/>Sink method XPath.compile(...)<br/>At XPathQuery.java:[line 35]<br/>At XPathQuery.java:[line 36]<br/>At XPathQuery.java:[line 50]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76229');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern XSS_SERVLET</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76229" style="display: none;">
+<a href="#XSS_SERVLET">Bug type XSS_SERVLET (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.XPathQuery<br/>In method org.cysecurity.cspf.jvl.controller.XPathQuery.processRequest(HttpServletRequest, HttpServletResponse)<br/>At XPathQuery.java:[line 54]<br/>Sink method PrintWriter.println(...)<br/>At XPathQuery.java:[line 53]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N76301');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern XSS_SERVLET</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N76301" style="display: none;">
+<a href="#XSS_SERVLET">Bug type XSS_SERVLET (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.XPathQuery<br/>In method org.cysecurity.cspf.jvl.controller.XPathQuery.processRequest(HttpServletRequest, HttpServletResponse)<br/>At XPathQuery.java:[line 69]<br/>Sink method PrintWriter.print(...)</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76362');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern XXE_DOCUMENT</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76362" style="display: none;">
+<a href="#XXE_DOCUMENT">Bug type XXE_DOCUMENT (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.XPathQuery<br/>In method org.cysecurity.cspf.jvl.controller.XPathQuery.processRequest(HttpServletRequest, HttpServletResponse)<br/>At XPathQuery.java:[line 45]<br/>Value DocumentBuilder.parse(...)</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N76609');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern XSS_SERVLET</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N76609" style="display: none;">
+<a href="#XSS_SERVLET">Bug type XSS_SERVLET (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.xxe<br/>In method org.cysecurity.cspf.jvl.controller.xxe.processRequest(HttpServletRequest, HttpServletResponse)<br/>At xxe.java:[line 54]<br/>Sink method PrintWriter.print(...)<br/>At xxe.java:[line 54]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76681');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern XSS_SERVLET</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76681" style="display: none;">
+<a href="#XSS_SERVLET">Bug type XSS_SERVLET (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.xxe<br/>In method org.cysecurity.cspf.jvl.controller.xxe.processRequest(HttpServletRequest, HttpServletResponse)<br/>At xxe.java:[line 60]<br/>Sink method PrintWriter.print(...)</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N76742');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern XXE_DOCUMENT</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N76742" style="display: none;">
+<a href="#XXE_DOCUMENT">Bug type XXE_DOCUMENT (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.xxe<br/>In method org.cysecurity.cspf.jvl.controller.xxe.processRequest(HttpServletRequest, HttpServletResponse)<br/>At xxe.java:[line 48]<br/>Value DocumentBuilder.parse(...)</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N77047');">
+<td>
+<span class="priority-2">TEST</span>
+</td>
+<td>Unknown bug pattern PATH_TRAVERSAL_IN</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N77047" style="display: none;">
+<a href="#PATH_TRAVERSAL_IN">Bug type PATH_TRAVERSAL_IN (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.model.DBConnect<br/>In method org.cysecurity.cspf.jvl.model.DBConnect.connect(String)<br/>At DBConnect.java:[line 26]<br/>Sink method FileInputStream(...)<br/>At EmailCheck.java:[line 41]<br/>At LoginValidator.java:[line 47]<br/>At Register.java:[line 42]<br/>At SendMessage.java:[line 41]<br/>At UsernameCheck.java:[line 41]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N77327');">
+<td>
+<span class="priority-1">TEST</span>
+</td>
+<td>Unknown bug pattern WEAK_MESSAGE_DIGEST_MD5</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N77327" style="display: none;">
+<a href="#WEAK_MESSAGE_DIGEST_MD5">Bug type WEAK_MESSAGE_DIGEST_MD5 (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.model.HashMe<br/>In method org.cysecurity.cspf.jvl.model.HashMe.hashMe(String)<br/>At HashMe.java:[line 16]<br/>Value MD5</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_I18N">Internationalization Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65744');">
+<td>
+<span class="priority-1">Dm</span>
+</td>
+<td>Found reliance on default encoding: new java.io.FileWriter(File)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65744" style="display: none;">
+<a href="#DM_DEFAULT_ENCODING">Bug type DM_DEFAULT_ENCODING (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.AddPage<br/>In method org.cysecurity.cspf.jvl.controller.AddPage.processRequest(HttpServletRequest, HttpServletResponse)<br/>Called method new java.io.FileWriter(File)<br/>At AddPage.java:[line 52]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N77163');">
+<td>
+<span class="priority-1">Dm</span>
+</td>
+<td>Found reliance on default encoding: String.getBytes()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N77163" style="display: none;">
+<a href="#DM_DEFAULT_ENCODING">Bug type DM_DEFAULT_ENCODING (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.model.HashMe<br/>In method org.cysecurity.cspf.jvl.model.HashMe.hashMe(String)<br/>Called method String.getBytes()<br/>At HashMe.java:[line 17]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_PERFORMANCE">Performance Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66513');">
+<td>
+<span class="priority-2">Bx</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) invokes inefficient new Integer(int) constructor; use Integer.valueOf(int) instead</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66513" style="display: none;">
+<a href="#DM_NUMBER_CTOR">Bug type DM_NUMBER_CTOR (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.EmailCheck<br/>In method org.cysecurity.cspf.jvl.controller.EmailCheck.processRequest(HttpServletRequest, HttpServletResponse)<br/>Called method new Integer(int)<br/>Should call Integer.valueOf(int) instead<br/>At EmailCheck.java:[line 55]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N74607');">
+<td>
+<span class="priority-2">Bx</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) invokes inefficient new Integer(int) constructor; use Integer.valueOf(int) instead</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N74607" style="display: none;">
+<a href="#DM_NUMBER_CTOR">Bug type DM_NUMBER_CTOR (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.UsernameCheck<br/>In method org.cysecurity.cspf.jvl.controller.UsernameCheck.processRequest(HttpServletRequest, HttpServletResponse)<br/>Called method new Integer(int)<br/>Should call Integer.valueOf(int) instead<br/>At UsernameCheck.java:[line 55]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76422');">
+<td>
+<span class="priority-3">Dm</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) invokes toString() method on a String</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76422" style="display: none;">
+<a href="#DM_STRING_TOSTRING">Bug type DM_STRING_TOSTRING (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.xxe<br/>In method org.cysecurity.cspf.jvl.controller.xxe.processRequest(HttpServletRequest, HttpServletResponse)<br/>At xxe.java:[line 54]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N77387');">
+<td>
+<span class="priority-3">UPM</span>
+</td>
+<td>Private method setId(Long) is never called</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N77387" style="display: none;">
+<a href="#UPM_UNCALLED_PRIVATE_METHOD">Bug type UPM_UNCALLED_PRIVATE_METHOD (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.model.orm.Users<br/>In method org.cysecurity.cspf.jvl.model.orm.Users.setId(Long)<br/>At Users.java:[lines 22-23]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_SECURITY">Security Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70198');">
+<td>
+<span class="priority-2">HRS</span>
+</td>
+<td>HTTP cookie formed from untrusted input</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70198" style="display: none;">
+<a href="#HRS_REQUEST_PARAMETER_TO_COOKIE">Bug type HRS_REQUEST_PARAMETER_TO_COOKIE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>Parameter "password"<br/>Value generated at LoginValidator.java:[line 44]<br/>Local variable named pass<br/>At LoginValidator.java:[line 64]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70279');">
+<td>
+<span class="priority-2">HRS</span>
+</td>
+<td>HTTP cookie formed from untrusted input</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70279" style="display: none;">
+<a href="#HRS_REQUEST_PARAMETER_TO_COOKIE">Bug type HRS_REQUEST_PARAMETER_TO_COOKIE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>Parameter "username"<br/>Value generated at LoginValidator.java:[line 43]<br/>Local variable named user<br/>At LoginValidator.java:[line 63]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72357');">
+<td>
+<span class="priority-1">HRS</span>
+</td>
+<td>HTTP parameter directly written to HTTP header output</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72357" style="display: none;">
+<a href="#HRS_REQUEST_PARAMETER_TO_HTTP_HEADER">Bug type HRS_REQUEST_PARAMETER_TO_HTTP_HEADER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Open<br/>In method org.cysecurity.cspf.jvl.controller.Open.processRequest(HttpServletRequest, HttpServletResponse)<br/>Parameter "url"<br/>Value generated at Open.java:[line 36]<br/>Local variable named url<br/>At Open.java:[line 39]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N65968');">
+<td>
+<span class="priority-2">PT</span>
+</td>
+<td>Relative path traversal</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N65968" style="display: none;">
+<a href="#PT_RELATIVE_PATH_TRAVERSAL">Bug type PT_RELATIVE_PATH_TRAVERSAL (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.AddPage<br/>In method org.cysecurity.cspf.jvl.controller.AddPage.processRequest(HttpServletRequest, HttpServletResponse)<br/>Called method new java.io.File(String)<br/>Parameter "filename"<br/>Value generated at AddPage.java:[line 39]<br/>Local variable named filePath<br/>At AddPage.java:[line 45]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67305');">
+<td>
+<span class="priority-1">SQL</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) passes a nonconstant String to an execute or addBatch method on an SQL statement</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67305" style="display: none;">
+<a href="#SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE">Bug type SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.EmailCheck<br/>In method org.cysecurity.cspf.jvl.controller.EmailCheck.processRequest(HttpServletRequest, HttpServletResponse)<br/>Value non-constant SQL string involving HTTP taint<br/>At EmailCheck.java:[line 48]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69573');">
+<td>
+<span class="priority-3">SQL</span>
+</td>
+<td>setup(String) passes a nonconstant String to an execute or addBatch method on an SQL statement</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69573" style="display: none;">
+<a href="#SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE">Bug type SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.setup(String)<br/>At Install.java:[line 127]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71704');">
+<td>
+<span class="priority-1">SQL</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) passes a nonconstant String to an execute or addBatch method on an SQL statement</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71704" style="display: none;">
+<a href="#SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE">Bug type SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>Value non-constant SQL string involving HTTP taint<br/>At LoginValidator.java:[line 52]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N73656');">
+<td>
+<span class="priority-1">SQL</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) passes a nonconstant String to an execute or addBatch method on an SQL statement</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N73656" style="display: none;">
+<a href="#SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE">Bug type SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Register<br/>In method org.cysecurity.cspf.jvl.controller.Register.processRequest(HttpServletRequest, HttpServletResponse)<br/>Value non-constant SQL string involving HTTP taint<br/>At Register.java:[line 58]<br/>Another occurrence at Register.java:[line 59]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75399');">
+<td>
+<span class="priority-1">SQL</span>
+</td>
+<td>processRequest(HttpServletRequest, HttpServletResponse) passes a nonconstant String to an execute or addBatch method on an SQL statement</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75399" style="display: none;">
+<a href="#SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE">Bug type SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.UsernameCheck<br/>In method org.cysecurity.cspf.jvl.controller.UsernameCheck.processRequest(HttpServletRequest, HttpServletResponse)<br/>Value non-constant SQL string involving HTTP taint<br/>At UsernameCheck.java:[line 48]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66295');">
+<td>
+<span class="priority-2">XSS</span>
+</td>
+<td>HTTP parameter written to Servlet output</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66295" style="display: none;">
+<a href="#XSS_REQUEST_PARAMETER_TO_SERVLET_WRITER">Bug type XSS_REQUEST_PARAMETER_TO_SERVLET_WRITER (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.AddPage<br/>In method org.cysecurity.cspf.jvl.controller.AddPage.processRequest(HttpServletRequest, HttpServletResponse)<br/>Parameter "filename"<br/>Value generated at AddPage.java:[line 39]<br/>At AddPage.java:[line 55]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_STYLE">Dodgy code Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72190');">
+<td>
+<span class="priority-3">DLS</span>
+</td>
+<td>Dead store to out</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72190" style="display: none;">
+<a href="#DLS_DEAD_LOCAL_STORE">Bug type DLS_DEAD_LOCAL_STORE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Logout<br/>In method org.cysecurity.cspf.jvl.controller.Logout.processRequest(HttpServletRequest, HttpServletResponse)<br/>Local variable named out<br/>At Logout.java:[line 36]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N72664');">
+<td>
+<span class="priority-3">DLS</span>
+</td>
+<td>Dead store to out</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N72664" style="display: none;">
+<a href="#DLS_DEAD_LOCAL_STORE">Bug type DLS_DEAD_LOCAL_STORE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Register<br/>In method org.cysecurity.cspf.jvl.controller.Register.processRequest(HttpServletRequest, HttpServletResponse)<br/>Local variable named out<br/>At Register.java:[line 41]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N73729');">
+<td>
+<span class="priority-3">DLS</span>
+</td>
+<td>Dead store to out</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N73729" style="display: none;">
+<a href="#DLS_DEAD_LOCAL_STORE">Bug type DLS_DEAD_LOCAL_STORE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.SendMessage<br/>In method org.cysecurity.cspf.jvl.controller.SendMessage.processRequest(HttpServletRequest, HttpServletResponse)<br/>Local variable named out<br/>At SendMessage.java:[line 40]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66986');">
+<td>
+<span class="priority-3">RCN</span>
+</td>
+<td>Redundant nullcheck of con, which is known to be non-null</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66986" style="display: none;">
+<a href="#RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE">Bug type RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.EmailCheck<br/>In method org.cysecurity.cspf.jvl.controller.EmailCheck.processRequest(HttpServletRequest, HttpServletResponse)<br/>Value loaded from con<br/>Return value of org.cysecurity.cspf.jvl.model.DBConnect.connect(String) of type java.sql.Connection<br/>Redundant null check at EmailCheck.java:[line 44]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68642');">
+<td>
+<span class="priority-3">RCN</span>
+</td>
+<td>Redundant nullcheck of con, which is known to be non-null</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68642" style="display: none;">
+<a href="#RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE">Bug type RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.setup(String)<br/>Value loaded from con<br/>Return value of java.sql.DriverManager.getConnection(String, String, String) of type java.sql.Connection<br/>Redundant null check at Install.java:[line 113]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N71177');">
+<td>
+<span class="priority-3">RCN</span>
+</td>
+<td>Redundant nullcheck of con, which is known to be non-null</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N71177" style="display: none;">
+<a href="#RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE">Bug type RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>Value loaded from con<br/>Return value of org.cysecurity.cspf.jvl.model.DBConnect.connect(String) of type java.sql.Connection<br/>Redundant null check at LoginValidator.java:[line 48]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71259');">
+<td>
+<span class="priority-3">RCN</span>
+</td>
+<td>Redundant nullcheck of rs, which is known to be non-null</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71259" style="display: none;">
+<a href="#RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE">Bug type RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>Value loaded from rs<br/>Return value of java.sql.Statement.executeQuery(String) of type java.sql.ResultSet<br/>Redundant null check at LoginValidator.java:[line 53]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N72970');">
+<td>
+<span class="priority-3">RCN</span>
+</td>
+<td>Redundant nullcheck of con, which is known to be non-null</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N72970" style="display: none;">
+<a href="#RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE">Bug type RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Register<br/>In method org.cysecurity.cspf.jvl.controller.Register.processRequest(HttpServletRequest, HttpServletResponse)<br/>Value loaded from con<br/>Return value of org.cysecurity.cspf.jvl.model.DBConnect.connect(String) of type java.sql.Connection<br/>Redundant null check at Register.java:[line 54]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N74059');">
+<td>
+<span class="priority-3">RCN</span>
+</td>
+<td>Redundant nullcheck of con, which is known to be non-null</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N74059" style="display: none;">
+<a href="#RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE">Bug type RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.SendMessage<br/>In method org.cysecurity.cspf.jvl.controller.SendMessage.processRequest(HttpServletRequest, HttpServletResponse)<br/>Value loaded from con<br/>Return value of org.cysecurity.cspf.jvl.model.DBConnect.connect(String) of type java.sql.Connection<br/>Redundant null check at SendMessage.java:[line 46]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N75080');">
+<td>
+<span class="priority-3">RCN</span>
+</td>
+<td>Redundant nullcheck of con, which is known to be non-null</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N75080" style="display: none;">
+<a href="#RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE">Bug type RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.UsernameCheck<br/>In method org.cysecurity.cspf.jvl.controller.UsernameCheck.processRequest(HttpServletRequest, HttpServletResponse)<br/>Value loaded from con<br/>Return value of org.cysecurity.cspf.jvl.model.DBConnect.connect(String) of type java.sql.Connection<br/>Redundant null check at UsernameCheck.java:[line 44]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67068');">
+<td>
+<span class="priority-3">REC</span>
+</td>
+<td>Exception is caught when Exception is not thrown</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67068" style="display: none;">
+<a href="#REC_CATCH_EXCEPTION">Bug type REC_CATCH_EXCEPTION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.EmailCheck<br/>In method org.cysecurity.cspf.jvl.controller.EmailCheck.processRequest(HttpServletRequest, HttpServletResponse)<br/>At EmailCheck.java:[line 60]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68723');">
+<td>
+<span class="priority-3">REC</span>
+</td>
+<td>Exception is caught when Exception is not thrown</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68723" style="display: none;">
+<a href="#REC_CATCH_EXCEPTION">Bug type REC_CATCH_EXCEPTION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Install.java:[line 98]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71336');">
+<td>
+<span class="priority-2">REC</span>
+</td>
+<td>Exception is caught when Exception is not thrown</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71336" style="display: none;">
+<a href="#REC_CATCH_EXCEPTION">Bug type REC_CATCH_EXCEPTION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.LoginValidator<br/>In method org.cysecurity.cspf.jvl.controller.LoginValidator.processRequest(HttpServletRequest, HttpServletResponse)<br/>At LoginValidator.java:[line 77]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N72263');">
+<td>
+<span class="priority-3">REC</span>
+</td>
+<td>Exception is caught when Exception is not thrown</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N72263" style="display: none;">
+<a href="#REC_CATCH_EXCEPTION">Bug type REC_CATCH_EXCEPTION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Logout<br/>In method org.cysecurity.cspf.jvl.controller.Logout.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Logout.java:[line 42]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72438');">
+<td>
+<span class="priority-3">REC</span>
+</td>
+<td>Exception is caught when Exception is not thrown</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72438" style="display: none;">
+<a href="#REC_CATCH_EXCEPTION">Bug type REC_CATCH_EXCEPTION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Open<br/>In method org.cysecurity.cspf.jvl.controller.Open.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Open.java:[line 46]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N73052');">
+<td>
+<span class="priority-1">REC</span>
+</td>
+<td>Exception is caught when Exception is not thrown</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N73052" style="display: none;">
+<a href="#REC_CATCH_EXCEPTION">Bug type REC_CATCH_EXCEPTION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Register<br/>In method org.cysecurity.cspf.jvl.controller.Register.processRequest(HttpServletRequest, HttpServletResponse)<br/>At Register.java:[line 78]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N74141');">
+<td>
+<span class="priority-3">REC</span>
+</td>
+<td>Exception is caught when Exception is not thrown</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N74141" style="display: none;">
+<a href="#REC_CATCH_EXCEPTION">Bug type REC_CATCH_EXCEPTION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.SendMessage<br/>In method org.cysecurity.cspf.jvl.controller.SendMessage.processRequest(HttpServletRequest, HttpServletResponse)<br/>At SendMessage.java:[line 64]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N75162');">
+<td>
+<span class="priority-3">REC</span>
+</td>
+<td>Exception is caught when Exception is not thrown</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N75162" style="display: none;">
+<a href="#REC_CATCH_EXCEPTION">Bug type REC_CATCH_EXCEPTION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.UsernameCheck<br/>In method org.cysecurity.cspf.jvl.controller.UsernameCheck.processRequest(HttpServletRequest, HttpServletResponse)<br/>At UsernameCheck.java:[line 60]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75593');">
+<td>
+<span class="priority-3">REC</span>
+</td>
+<td>Exception is caught when Exception is not thrown</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75593" style="display: none;">
+<a href="#REC_CATCH_EXCEPTION">Bug type REC_CATCH_EXCEPTION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.XPathQuery<br/>In method org.cysecurity.cspf.jvl.controller.XPathQuery.processRequest(HttpServletRequest, HttpServletResponse)<br/>At XPathQuery.java:[line 67]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N76515');">
+<td>
+<span class="priority-3">REC</span>
+</td>
+<td>Exception is caught when Exception is not thrown</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N76515" style="display: none;">
+<a href="#REC_CATCH_EXCEPTION">Bug type REC_CATCH_EXCEPTION (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.xxe<br/>In method org.cysecurity.cspf.jvl.controller.xxe.processRequest(HttpServletRequest, HttpServletResponse)<br/>At xxe.java:[line 58]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N69630');">
+<td>
+<span class="priority-2">ST</span>
+</td>
+<td>Write to static field Install.adminuser from instance method processRequest(HttpServletRequest, HttpServletResponse)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N69630" style="display: none;">
+<a href="#ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD">Bug type ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.processRequest(HttpServletRequest, HttpServletResponse)<br/>Field org.cysecurity.cspf.jvl.controller.Install.adminuser<br/>At Install.java:[line 60]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69701');">
+<td>
+<span class="priority-2">ST</span>
+</td>
+<td>Write to static field Install.dbname from instance method processRequest(HttpServletRequest, HttpServletResponse)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69701" style="display: none;">
+<a href="#ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD">Bug type ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.processRequest(HttpServletRequest, HttpServletResponse)<br/>Field org.cysecurity.cspf.jvl.controller.Install.dbname<br/>At Install.java:[line 58]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N69772');">
+<td>
+<span class="priority-2">ST</span>
+</td>
+<td>Write to static field Install.dbpass from instance method processRequest(HttpServletRequest, HttpServletResponse)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N69772" style="display: none;">
+<a href="#ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD">Bug type ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.processRequest(HttpServletRequest, HttpServletResponse)<br/>Field org.cysecurity.cspf.jvl.controller.Install.dbpass<br/>At Install.java:[line 57]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69843');">
+<td>
+<span class="priority-2">ST</span>
+</td>
+<td>Write to static field Install.dburl from instance method processRequest(HttpServletRequest, HttpServletResponse)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69843" style="display: none;">
+<a href="#ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD">Bug type ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.processRequest(HttpServletRequest, HttpServletResponse)<br/>Field org.cysecurity.cspf.jvl.controller.Install.dburl<br/>At Install.java:[line 54]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N69914');">
+<td>
+<span class="priority-2">ST</span>
+</td>
+<td>Write to static field Install.dbuser from instance method processRequest(HttpServletRequest, HttpServletResponse)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N69914" style="display: none;">
+<a href="#ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD">Bug type ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.processRequest(HttpServletRequest, HttpServletResponse)<br/>Field org.cysecurity.cspf.jvl.controller.Install.dbuser<br/>At Install.java:[line 56]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69985');">
+<td>
+<span class="priority-2">ST</span>
+</td>
+<td>Write to static field Install.jdbcdriver from instance method processRequest(HttpServletRequest, HttpServletResponse)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69985" style="display: none;">
+<a href="#ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD">Bug type ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.processRequest(HttpServletRequest, HttpServletResponse)<br/>Field org.cysecurity.cspf.jvl.controller.Install.jdbcdriver<br/>At Install.java:[line 55]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70056');">
+<td>
+<span class="priority-2">ST</span>
+</td>
+<td>Write to static field Install.siteTitle from instance method processRequest(HttpServletRequest, HttpServletResponse)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70056" style="display: none;">
+<a href="#ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD">Bug type ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.processRequest(HttpServletRequest, HttpServletResponse)<br/>Field org.cysecurity.cspf.jvl.controller.Install.siteTitle<br/>At Install.java:[line 59]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70127');">
+<td>
+<span class="priority-3">ST</span>
+</td>
+<td>Write to static field Install.adminpass from instance method processRequest(HttpServletRequest, HttpServletResponse)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70127" style="display: none;">
+<a href="#ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD">Bug type ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD (click for details)</a>
+<br/>In class org.cysecurity.cspf.jvl.controller.Install<br/>In method org.cysecurity.cspf.jvl.controller.Install.processRequest(HttpServletRequest, HttpServletResponse)<br/>Field org.cysecurity.cspf.jvl.controller.Install.adminpass<br/>At Install.java:[line 61]</p>
+</td>
+</tr>
+</table>
+<h1>
+<a name="Details">Details</a>
+</h1>
+<h2>
+<a name="DM_NUMBER_CTOR">DM_NUMBER_CTOR: Method invokes inefficient Number constructor; use static valueOf instead</a>
+</h2>
+      
+      <p>
+      Using <code>new Integer(int)</code> is guaranteed to always result in a new object whereas
+      <code>Integer.valueOf(int)</code> allows caching of values to be done by the compiler, class library, or JVM.
+      Using of cached values avoids object allocation and the code will be faster.
+      </p>
+      <p>
+      Values between -128 and 127 are guaranteed to have corresponding cached instances
+      and using <code>valueOf</code> is approximately 3.5 times faster than using constructor.
+      For values outside the constant range the performance of both styles is the same.
+      </p>
+      <p>
+      Unless the class must be compatible with JVMs predating Java 1.5,
+      use either autoboxing or the <code>valueOf()</code> method when creating instances of
+      <code>Long</code>, <code>Integer</code>, <code>Short</code>, <code>Character</code>, and <code>Byte</code>.
+      </p>
+      
+    
+<h2>
+<a name="DE_MIGHT_IGNORE">DE_MIGHT_IGNORE: Method might ignore exception</a>
+</h2>
+
+  <p> This method might ignore an exception.&nbsp; In general, exceptions
+  should be handled or reported in some way, or they should be thrown
+  out of the method.</p>
+
+    
+<h2>
+<a name="DLS_DEAD_LOCAL_STORE">DLS_DEAD_LOCAL_STORE: Dead store to local variable</a>
+</h2>
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables.  Because FindBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    
+<h2>
+<a name="DM_STRING_TOSTRING">DM_STRING_TOSTRING: Method invokes toString() method on a String</a>
+</h2>
+
+  <p> Calling <code>String.toString()</code> is just a redundant operation.
+  Just use the String.</p>
+
+    
+<h2>
+<a name="DM_DEFAULT_ENCODING">DM_DEFAULT_ENCODING: Reliance on default encoding</a>
+</h2>
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion, and will assume that the default platform encoding is suitable. This will cause the application behaviour to vary between platforms. Use an alternative API and specify a charset name or Charset object explicitly.  </p>
+
+      
+<h2>
+<a name="HRS_REQUEST_PARAMETER_TO_COOKIE">HRS_REQUEST_PARAMETER_TO_COOKIE: HTTP cookie formed from untrusted input</a>
+</h2>
+      
+    <p>This code constructs an HTTP Cookie using an untrusted HTTP parameter. If this cookie is added to an HTTP response, it will allow a HTTP response splitting
+vulnerability. See <a href="http://en.wikipedia.org/wiki/HTTP_response_splitting">http://en.wikipedia.org/wiki/HTTP_response_splitting</a>
+for more information.</p>
+<p>FindBugs looks only for the most blatant, obvious cases of HTTP response splitting.
+If FindBugs found <em>any</em>, you <em>almost certainly</em> have more
+vulnerabilities that FindBugs doesn't report. If you are concerned about HTTP response splitting, you should seriously
+consider using a commercial static analysis or pen-testing tool.
+</p>
+
+
+    
+<h2>
+<a name="HRS_REQUEST_PARAMETER_TO_HTTP_HEADER">HRS_REQUEST_PARAMETER_TO_HTTP_HEADER: HTTP Response splitting vulnerability</a>
+</h2>
+            
+    <p>This code directly writes an HTTP parameter to an HTTP header, which allows for a HTTP response splitting
+vulnerability. See <a href="http://en.wikipedia.org/wiki/HTTP_response_splitting">http://en.wikipedia.org/wiki/HTTP_response_splitting</a>
+for more information.</p>
+<p>FindBugs looks only for the most blatant, obvious cases of HTTP response splitting.
+If FindBugs found <em>any</em>, you <em>almost certainly</em> have more
+vulnerabilities that FindBugs doesn't report. If you are concerned about HTTP response splitting, you should seriously
+consider using a commercial static analysis or pen-testing tool.
+</p>
+
+
+        
+<h2>
+<a name="NM_CLASS_NAMING_CONVENTION">NM_CLASS_NAMING_CONVENTION: Class names should start with an upper case letter</a>
+</h2>
+
+  <p> Class names should be nouns, in mixed case with the first letter of each internal word capitalized. Try to keep your class names simple and descriptive. Use whole words-avoid acronyms and abbreviations (unless the abbreviation is much more widely used than the long form, such as URL or HTML).
+</p>
+
+    
+<h2>
+<a name="NP_NULL_ON_SOME_PATH_EXCEPTION">NP_NULL_ON_SOME_PATH_EXCEPTION: Possible null pointer dereference in method on exception path</a>
+</h2>
+
+<p> A reference value which is null on some exception control path is
+dereferenced here.&nbsp; This may lead to a <code>NullPointerException</code>
+when the code is executed.&nbsp;
+Note that because FindBugs currently does not prune infeasible exception paths,
+this may be a false warning.</p>
+
+<p> Also note that FindBugs considers the default case of a switch statement to
+be an exception path, since the default case is often infeasible.</p>
+
+    
+<h2>
+<a name="OBL_UNSATISFIED_OBLIGATION">OBL_UNSATISFIED_OBLIGATION: Method may fail to clean up stream or resource</a>
+</h2>
+          
+          <p>
+          This method may fail to clean up (close, dispose of) a stream,
+          database object, or other
+          resource requiring an explicit cleanup operation.
+          </p>
+
+          <p>
+          In general, if a method opens a stream or other resource,
+          the method should use a try/finally block to ensure that
+          the stream or resource is cleaned up before the method
+          returns.
+          </p>
+
+          <p>
+          This bug pattern is essentially the same as the
+          OS_OPEN_STREAM and ODR_OPEN_DATABASE_RESOURCE
+          bug patterns, but is based on a different
+          (and hopefully better) static analysis technique.
+          We are interested is getting feedback about the
+          usefulness of this bug pattern.
+          To send feedback, either:
+          </p>
+          <ul>
+            <li>send email to findbugs@cs.umd.edu</li>
+            <li>file a bug report: <a href="http://findbugs.sourceforge.net/reportingBugs.html">http://findbugs.sourceforge.net/reportingBugs.html</a></li>
+          </ul>
+
+          <p>
+          In particular,
+          the false-positive suppression heuristics for this
+          bug pattern have not been extensively tuned, so
+          reports about false positives are helpful to us.
+          </p>
+
+          <p>
+          See Weimer and Necula, <i>Finding and Preventing Run-Time Error Handling Mistakes</i>, for
+          a description of the analysis technique.
+          </p>
+          
+      
+<h2>
+<a name="ODR_OPEN_DATABASE_RESOURCE">ODR_OPEN_DATABASE_RESOURCE: Method may fail to close database resource</a>
+</h2>
+
+<p> The method creates a database resource (such as a database connection
+or row set), does not assign it to any
+fields, pass it to other methods, or return it, and does not appear to close
+the object on all paths out of the method.&nbsp; Failure to
+close database resources on all paths out of a method may
+result in poor performance, and could cause the application to
+have problems communicating with the database.
+</p>
+
+    
+<h2>
+<a name="OS_OPEN_STREAM">OS_OPEN_STREAM: Method may fail to close stream</a>
+</h2>
+
+<p> The method creates an IO stream object, does not assign it to any
+fields, pass it to other methods that might close it,
+or return it, and does not appear to close
+the stream on all paths out of the method.&nbsp; This may result in
+a file descriptor leak.&nbsp; It is generally a good
+idea to use a <code>finally</code> block to ensure that streams are
+closed.</p>
+
+    
+<h2>
+<a name="OS_OPEN_STREAM_EXCEPTION_PATH">OS_OPEN_STREAM_EXCEPTION_PATH: Method may fail to close stream on exception</a>
+</h2>
+
+<p> The method creates an IO stream object, does not assign it to any
+fields, pass it to other methods, or return it, and does not appear to close
+it on all possible exception paths out of the method.&nbsp;
+This may result in a file descriptor leak.&nbsp; It is generally a good
+idea to use a <code>finally</code> block to ensure that streams are
+closed.</p>
+
+    
+<h2>
+<a name="PT_RELATIVE_PATH_TRAVERSAL">PT_RELATIVE_PATH_TRAVERSAL: Relative path traversal in servlet</a>
+</h2>
+
+    <p>The software uses an HTTP request parameter to construct a pathname that should be within a restricted directory, but it does not properly neutralize sequences such as ".." that can resolve to a location that is outside of that directory.
+
+See <a href="http://cwe.mitre.org/data/definitions/23.html">http://cwe.mitre.org/data/definitions/23.html</a>
+for more information.</p>
+<p>FindBugs looks only for the most blatant, obvious cases of relative path traversal.
+If FindBugs found <em>any</em>, you <em>almost certainly</em> have more
+vulnerabilities that FindBugs doesn't report. If you are concerned about relative path traversal, you should seriously
+consider using a commercial static analysis or pen-testing tool.
+</p>
+
+
+    
+<h2>
+<a name="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE">RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE: Redundant nullcheck of value known to be non-null</a>
+</h2>
+
+<p> This method contains a redundant check of a known non-null value against
+the constant null.</p>
+
+    
+<h2>
+<a name="REC_CATCH_EXCEPTION">REC_CATCH_EXCEPTION: Exception is caught when Exception is not thrown</a>
+</h2>
+  
+  <p>
+  This method uses a try-catch block that catches Exception objects, but Exception is not
+  thrown within the try block, and RuntimeException is not explicitly caught.  It is a common bug pattern to
+  say try { ... } catch (Exception e) { something } as a shorthand for catching a number of types of exception
+  each of whose catch blocks is identical, but this construct also accidentally catches RuntimeException as well,
+  masking potential bugs.
+  </p>
+  <p>A better approach is to either explicitly catch the specific exceptions that are thrown,
+  or to explicitly catch RuntimeException exception, rethrow it, and then catch all non-Runtime Exceptions, as shown below:</p>
+  <pre>
+  try {
+    ...
+  } catch (RuntimeException e) {
+    throw e;
+  } catch (Exception e) {
+    ... deal with all non-runtime exceptions ...
+  }</pre>
+  
+     
+<h2>
+<a name="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE">RV_RETURN_VALUE_IGNORED_BAD_PRACTICE: Method ignores exceptional return value</a>
+</h2>
+
+   <p> This method returns a value that is not checked. The return value should be checked
+since it can indicate an unusual or unexpected function execution. For
+example, the <code>File.delete()</code> method returns false
+if the file could not be successfully deleted (rather than
+throwing an Exception).
+If you don't check the result, you won't notice if the method invocation
+signals unexpected behavior by returning an atypical return value.
+</p>
+
+    
+<h2>
+<a name="SE_NO_SERIALVERSIONID">SE_NO_SERIALVERSIONID: Class is Serializable, but doesn't define serialVersionUID</a>
+</h2>
+
+  <p> This class implements the <code>Serializable</code> interface, but does
+  not define a <code>serialVersionUID</code> field.&nbsp;
+  A change as simple as adding a reference to a .class object
+    will add synthetic fields to the class,
+   which will unfortunately change the implicit
+   serialVersionUID (e.g., adding a reference to <code>String.class</code>
+   will generate a static field <code>class$java$lang$String</code>).
+   Also, different source code to bytecode compilers may use different
+   naming conventions for synthetic variables generated for
+   references to class objects or inner classes.
+   To ensure interoperability of Serializable across versions,
+   consider adding an explicit serialVersionUID.</p>
+
+    
+<h2>
+<a name="SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE">SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE: Nonconstant string passed to execute or addBatch method on an SQL statement</a>
+</h2>
+
+  <p>The method invokes the execute or addBatch method on an SQL statement with a String that seems
+to be dynamically generated. Consider using
+a prepared statement instead. It is more efficient and less vulnerable to
+SQL injection attacks.
+</p>
+
+    
+<h2>
+<a name="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD">ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD: Write to static field from instance method</a>
+</h2>
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    
+<h2>
+<a name="UNKNOWN">UNKNOWN: Unknown bug pattern</a>
+</h2>
+
+<p>A warning was recorded, but findbugs can't find the description of this bug pattern
+and so can't describe it. This should occur only in cases of a bug in FindBugs or its configuration,
+or perhaps if an analysis was generated using a plugin, but that plugin is not currently loaded.
+.</p>
+
+    
+<h2>
+<a name="UPM_UNCALLED_PRIVATE_METHOD">UPM_UNCALLED_PRIVATE_METHOD: Private method is never called</a>
+</h2>
+
+<p> This private method is never called. Although it is
+possible that the method will be invoked through reflection,
+it is more likely that the method is never used, and should be
+removed.
+</p>
+
+
+<h2>
+<a name="XSS_REQUEST_PARAMETER_TO_SERVLET_WRITER">XSS_REQUEST_PARAMETER_TO_SERVLET_WRITER: Servlet reflected cross site scripting vulnerability</a>
+</h2>
+
+    <p>This code directly writes an HTTP parameter to Servlet output, which allows for a reflected cross site scripting
+vulnerability. See <a href="http://en.wikipedia.org/wiki/Cross-site_scripting">http://en.wikipedia.org/wiki/Cross-site_scripting</a>
+for more information.</p>
+<p>FindBugs looks only for the most blatant, obvious cases of cross site scripting.
+If FindBugs found <em>any</em>, you <em>almost certainly</em> have more cross site scripting
+vulnerabilities that FindBugs doesn't report. If you are concerned about cross site scripting, you should seriously
+consider using a commercial static analysis or pen-testing tool.
+</p>
+
+
+    </body>
+</html>

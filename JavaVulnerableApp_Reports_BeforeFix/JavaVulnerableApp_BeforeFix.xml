@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<BugCollection version="3.0.1" sequence="0" timestamp="1495961315000" analysisTimestamp="1495973351008" release="">
+<BugCollection version="3.0.1" sequence="0" timestamp="1495978654000" analysisTimestamp="1495979593275" release="">
   <Project projectName="JavaVulnerableLab Maven Webapp">
     <Jar>/home/caesar/Projects/IntelliJ/StaticCodeAnalysis/StaticAnalysisNew/JavaVulnerableLab-master/target/classes</Jar>
     <AuxClasspathEntry>/home/caesar/.m2/repository/org/codehaus/mojo/findbugs-maven-plugin/3.0.1/findbugs-maven-plugin-3.0.1.jar</AuxClasspathEntry>
@@ -393,7 +393,7 @@
   </BugInstance>
   <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE">
     <Class classname="org.cysecurity.cspf.jvl.controller.ForwardMe">
-      <SourceLine classname="org.cysecurity.cspf.jvl.controller.ForwardMe" start="21" end="89" sourcefile="ForwardMe.java" sourcepath="org/cysecurity/cspf/jvl/controller/ForwardMe.java"/>
+      <SourceLine classname="org.cysecurity.cspf.jvl.controller.ForwardMe" start="21" end="89" sourcefile="ForwardMe.java" sourcepath="org/cysecurity/cspf/jvl/controller/ForwardMe.java" synthetic="true"/>
     </Class>
   </BugInstance>
   <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" rank="20" abbrev="OBL" category="EXPERIMENTAL">
@@ -642,7 +642,7 @@
   </BugInstance>
   <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE">
     <Class classname="org.cysecurity.cspf.jvl.controller.Install">
-      <SourceLine classname="org.cysecurity.cspf.jvl.controller.Install" start="28" end="223" sourcefile="Install.java" sourcepath="org/cysecurity/cspf/jvl/controller/Install.java"/>
+      <SourceLine classname="org.cysecurity.cspf.jvl.controller.Install" start="28" end="223" sourcefile="Install.java" sourcepath="org/cysecurity/cspf/jvl/controller/Install.java" synthetic="true"/>
     </Class>
   </BugInstance>
   <BugInstance type="SQL_INJECTION_JDBC" priority="2" rank="20" abbrev="TEST" category="EXPERIMENTAL">
@@ -999,7 +999,7 @@
   </BugInstance>
   <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE">
     <Class classname="org.cysecurity.cspf.jvl.controller.LoginValidator">
-      <SourceLine classname="org.cysecurity.cspf.jvl.controller.LoginValidator" start="28" end="119" sourcefile="LoginValidator.java" sourcepath="org/cysecurity/cspf/jvl/controller/LoginValidator.java"/>
+      <SourceLine classname="org.cysecurity.cspf.jvl.controller.LoginValidator" start="28" end="119" sourcefile="LoginValidator.java" sourcepath="org/cysecurity/cspf/jvl/controller/LoginValidator.java" synthetic="true"/>
     </Class>
   </BugInstance>
   <BugInstance type="SQL_INJECTION_JDBC" priority="1" rank="18" abbrev="TEST" category="EXPERIMENTAL">
@@ -1115,7 +1115,7 @@
   </BugInstance>
   <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE">
     <Class classname="org.cysecurity.cspf.jvl.controller.Logout">
-      <SourceLine classname="org.cysecurity.cspf.jvl.controller.Logout" start="21" end="84" sourcefile="Logout.java" sourcepath="org/cysecurity/cspf/jvl/controller/Logout.java"/>
+      <SourceLine classname="org.cysecurity.cspf.jvl.controller.Logout" start="21" end="84" sourcefile="Logout.java" sourcepath="org/cysecurity/cspf/jvl/controller/Logout.java" synthetic="true"/>
     </Class>
   </BugInstance>
   <BugInstance type="HRS_REQUEST_PARAMETER_TO_HTTP_HEADER" priority="1" rank="5" abbrev="HRS" category="SECURITY">
@@ -1151,7 +1151,7 @@
   </BugInstance>
   <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE">
     <Class classname="org.cysecurity.cspf.jvl.controller.Open">
-      <SourceLine classname="org.cysecurity.cspf.jvl.controller.Open" start="20" end="88" sourcefile="Open.java" sourcepath="org/cysecurity/cspf/jvl/controller/Open.java"/>
+      <SourceLine classname="org.cysecurity.cspf.jvl.controller.Open" start="20" end="88" sourcefile="Open.java" sourcepath="org/cysecurity/cspf/jvl/controller/Open.java" synthetic="true"/>
     </Class>
   </BugInstance>
   <BugInstance type="UNVALIDATED_REDIRECT" priority="1" rank="18" abbrev="TEST" category="EXPERIMENTAL">
@@ -1285,7 +1285,7 @@
   </BugInstance>
   <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE">
     <Class classname="org.cysecurity.cspf.jvl.controller.Register">
-      <SourceLine classname="org.cysecurity.cspf.jvl.controller.Register" start="26" end="120" sourcefile="Register.java" sourcepath="org/cysecurity/cspf/jvl/controller/Register.java"/>
+      <SourceLine classname="org.cysecurity.cspf.jvl.controller.Register" start="26" end="120" sourcefile="Register.java" sourcepath="org/cysecurity/cspf/jvl/controller/Register.java" synthetic="true"/>
     </Class>
   </BugInstance>
   <BugInstance type="SQL_INJECTION_JDBC" priority="1" rank="18" abbrev="TEST" category="EXPERIMENTAL">
@@ -1449,7 +1449,7 @@
   </BugInstance>
   <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE">
     <Class classname="org.cysecurity.cspf.jvl.controller.SendMessage">
-      <SourceLine classname="org.cysecurity.cspf.jvl.controller.SendMessage" start="23" end="109" sourcefile="SendMessage.java" sourcepath="org/cysecurity/cspf/jvl/controller/SendMessage.java"/>
+      <SourceLine classname="org.cysecurity.cspf.jvl.controller.SendMessage" start="23" end="109" sourcefile="SendMessage.java" sourcepath="org/cysecurity/cspf/jvl/controller/SendMessage.java" synthetic="true"/>
     </Class>
   </BugInstance>
   <BugInstance type="UNVALIDATED_REDIRECT" priority="2" rank="20" abbrev="TEST" category="EXPERIMENTAL">
@@ -1565,7 +1565,7 @@
   </BugInstance>
   <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE">
     <Class classname="org.cysecurity.cspf.jvl.controller.UsernameCheck">
-      <SourceLine classname="org.cysecurity.cspf.jvl.controller.UsernameCheck" start="25" end="105" sourcefile="UsernameCheck.java" sourcepath="org/cysecurity/cspf/jvl/controller/UsernameCheck.java"/>
+      <SourceLine classname="org.cysecurity.cspf.jvl.controller.UsernameCheck" start="25" end="105" sourcefile="UsernameCheck.java" sourcepath="org/cysecurity/cspf/jvl/controller/UsernameCheck.java" synthetic="true"/>
     </Class>
   </BugInstance>
   <BugInstance type="SQL_INJECTION_JDBC" priority="1" rank="18" abbrev="TEST" category="EXPERIMENTAL">
@@ -1642,7 +1642,7 @@
   </BugInstance>
   <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE">
     <Class classname="org.cysecurity.cspf.jvl.controller.XPathQuery">
-      <SourceLine classname="org.cysecurity.cspf.jvl.controller.XPathQuery" start="26" end="112" sourcefile="XPathQuery.java" sourcepath="org/cysecurity/cspf/jvl/controller/XPathQuery.java"/>
+      <SourceLine classname="org.cysecurity.cspf.jvl.controller.XPathQuery" start="26" end="112" sourcefile="XPathQuery.java" sourcepath="org/cysecurity/cspf/jvl/controller/XPathQuery.java" synthetic="true"/>
     </Class>
   </BugInstance>
   <BugInstance type="TRUST_BOUNDARY_VIOLATION" priority="3" rank="20" abbrev="TEST" category="EXPERIMENTAL">
@@ -1751,7 +1751,7 @@
   </BugInstance>
   <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE">
     <Class classname="org.cysecurity.cspf.jvl.controller.xxe">
-      <SourceLine classname="org.cysecurity.cspf.jvl.controller.xxe" start="27" end="103" sourcefile="xxe.java" sourcepath="org/cysecurity/cspf/jvl/controller/xxe.java"/>
+      <SourceLine classname="org.cysecurity.cspf.jvl.controller.xxe" start="27" end="103" sourcefile="xxe.java" sourcepath="org/cysecurity/cspf/jvl/controller/xxe.java" synthetic="true"/>
     </Class>
   </BugInstance>
   <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE">
@@ -1765,7 +1765,7 @@
   </BugInstance>
   <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE">
     <Class classname="org.cysecurity.cspf.jvl.controller.xxe">
-      <SourceLine classname="org.cysecurity.cspf.jvl.controller.xxe" start="27" end="103" sourcefile="xxe.java" sourcepath="org/cysecurity/cspf/jvl/controller/xxe.java"/>
+      <SourceLine classname="org.cysecurity.cspf.jvl.controller.xxe" start="27" end="103" sourcefile="xxe.java" sourcepath="org/cysecurity/cspf/jvl/controller/xxe.java" synthetic="true"/>
     </Class>
   </BugInstance>
   <BugInstance type="XSS_SERVLET" priority="2" rank="20" abbrev="TEST" category="EXPERIMENTAL">
@@ -1888,11 +1888,11 @@
       <SourceLine classname="org.cysecurity.cspf.jvl.model.orm.Users" start="13" end="35" sourcefile="Users.java" sourcepath="org/cysecurity/cspf/jvl/model/orm/Users.java"/>
     </Class>
     <Method classname="org.cysecurity.cspf.jvl.model.orm.Users" name="setId" signature="(Ljava/lang/Long;)V" isStatic="false">
-      <SourceLine classname="org.cysecurity.cspf.jvl.model.orm.Users" start="22" end="23" startBytecode="0" endBytecode="61" sourcefile="Users.java" sourcepath="org/cysecurity/cspf/jvl/model/orm/Users.java"/>
+      <SourceLine classname="org.cysecurity.cspf.jvl.model.orm.Users" start="22" end="23" startBytecode="0" endBytecode="61" sourcefile="Users.java" sourcepath="org/cysecurity/cspf/jvl/model/orm/Users.java" synthetic="true"/>
     </Method>
   </BugInstance>
   <Errors errors="0" missingClasses="0"></Errors>
-  <FindBugsSummary timestamp="Sun, 28 May 2017 14:18:35 +0530" total_classes="15" referenced_classes="82" total_bugs="159" total_size="491" num_packages="3" java_version="1.8.0_131" vm_version="25.131-b11" cpu_seconds="17.66" clock_seconds="5066.57" peak_mbytes="116.44" alloc_mbytes="455.50" gc_seconds="0.01" priority_3="72" priority_2="66" priority_1="21">
+  <FindBugsSummary timestamp="Sun, 28 May 2017 19:07:34 +0530" total_classes="15" referenced_classes="82" total_bugs="159" total_size="491" num_packages="3" java_version="1.8.0_131" vm_version="25.131-b11" cpu_seconds="5.21" clock_seconds="25.73" peak_mbytes="118.17" alloc_mbytes="455.50" gc_seconds="0.01" priority_3="72" priority_2="66" priority_1="21">
     <PackageStats package="org.cysecurity.cspf.jvl.controller" total_bugs="152" total_types="12" total_size="442" priority_3="71" priority_2="62" priority_1="19">
       <ClassStats class="org.cysecurity.cspf.jvl.controller.AddPage" sourceFile="AddPage.java" interface="false" size="36" bugs="11" priority_3="4" priority_2="4" priority_1="3"/>
       <ClassStats class="org.cysecurity.cspf.jvl.controller.EmailCheck" sourceFile="EmailCheck.java" interface="false" size="30" bugs="12" priority_3="4" priority_2="6" priority_1="2"/>
@@ -1915,7 +1915,7 @@
       <ClassStats class="org.cysecurity.cspf.jvl.model.orm.Users" sourceFile="Users.java" interface="false" size="21" bugs="1" priority_3="1"/>
     </PackageStats>
     <FindBugsProfile>
-      <ClassProfile name="edu.umd.cs.findbugs.SAXBugCollectionHandler" totalMilliseconds="114" invocations="1" avgMicrosecondsPerInvocation="114771" maxMicrosecondsPerInvocation="114771" standardDeviationMircosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.SAXBugCollectionHandler" totalMilliseconds="120" invocations="1" avgMicrosecondsPerInvocation="120777" maxMicrosecondsPerInvocation="120777" standardDeviationMircosecondsPerInvocation="0"/>
     </FindBugsProfile>
   </FindBugsSummary>
   <ClassFeatures></ClassFeatures>
